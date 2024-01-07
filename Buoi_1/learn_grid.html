@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Học về grid</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.bundle.min.js"></script>
+
+    </head>
+    <body>
+        <div>
+            <div id="menu1">
+                <!-- Thanh điều hướng thứ nhất -->
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Nội dung các
+                            buổi</a>
+                        <button class="navbar-toggler" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent1"
+                            aria-controls="navbarSupportedContent1"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse"
+                            id="navbarSupportedContent1">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="buoi1.html">Buổi
+                                        1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Buổi 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Buổi 3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <p></p>
+
+            <div id="menu2">
+                <!-- Thanh điều hướng thứ hai -->
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Nội dung tìm hiểu
+                            thêm</a>
+                        <button class="navbar-toggler" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent2"
+                            aria-controls="navbarSupportedContent2"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse"
+                            id="navbarSupportedContent2">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        href="learn_container.html">Learn
+                                        Container</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page"
+                                        href="learn_grid.html">Learn
+                                        Grid</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        href="learn_text.html">Learn
+                                        Text</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+        <div>
+            <h1>Hệ thống lưới - Grid trong Bootstrap 5</h1>
+            <p>Hệ thống lưới được xây dựng với flexbox và cho phép tối
+                đa 12 cột trên trang</p>
+            <p>
+                Bootstrap 5 Grid System là một hệ thống lưới linh hoạt được sử
+                dụng để tạo ra các bố cục đáp ứng trên các thiết bị có kích
+                thước khác nhau.
+                <br>
+                Hệ thống này sử dụng 12 cột, có thể được sắp
+                xếp theo nhiều cách khác nhau để tạo ra các bố cục đáp ứng </p>
+
+            <br>
+            <div class="col">
+                <p>col</p>
+            </div>
+
+            <div class="col p-2 bg-dark text-white ">
+                <p> col + padding + background color dark + text coloer white
+                </p>
+            </div>
+            <br>
+            <div>
+                <p class="col-sm-1  p-2 bg-primary text-white "> col small +
+                    padding + background color primary + text coloer white
+                </p>
+                <p class="col-sm-10  p-3 bg-dark text-white "> col small +
+                    padding + background color dark + text coloer white
+                </p>
+            </div>
+
+        </div>
+
+    </body>
+</html>

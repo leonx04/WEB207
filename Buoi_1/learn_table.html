@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Học về table trong bootstrap</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+
+        <div>
+            <div id="menu1">
+                <!-- Thanh điều hướng thứ nhất -->
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Nội dung các
+                            buổi</a>
+                        <button class="navbar-toggler" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent1"
+                            aria-controls="navbarSupportedContent1"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse"
+                            id="navbarSupportedContent1">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="buoi1.html">Buổi
+                                        1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Buổi 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Buổi 3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <p></p>
+
+            <div id="menu2">
+                <!-- Thanh điều hướng thứ hai -->
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Nội dung tìm hiểu
+                            thêm</a>
+                        <button class="navbar-toggler" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent2"
+                            aria-controls="navbarSupportedContent2"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse"
+                            id="navbarSupportedContent2">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        href="learn_container.html">Learn
+                                        Container</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        href="learn_grid.html">Learn
+                                        Grid</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        
+                                        href="learn_text.html">Learn
+                                        Text</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active"
+                                        href="learn_table.html">Learn
+                                        Table</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+
+        <div>
+            <div><h1> Table 1 </h1>
+                <div class="container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Họ tên</th>
+                                <th>Kỳ học</th>
+                                <th>Quê quán</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td>dungnxph@gmail.com</td>
+                            <td>Nguyễn Xuân Dũng</td>
+                            <td>Kỳ 5</td>
+                            <td>Nghệ An</td>
+                        </tbody>
+                        <tbody>
+                            <td>anhnx@gmail.com</td>
+                            <td>Nguyễn Xuân Anh</td>
+                            <td>Kỳ 5</td>
+                            <td>Hà nội</td>
+                        </tbody>
+                        <tbody>
+                            <td>hiennv@gmail.com</td>
+                            <td>Nguyễn Văn Hiển</td>
+                            <td>Kỳ 6</td>
+                            <td>Thanh Hóa</td>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h1>Table 2</h1>
+                    <div class="container mt-3">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>Tên</td>
+                                    <td>Kỳ học</td>
+                                    <td>Quê quán</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>hiennv@gmail.com</td>
+                                    <td>Nguyễn Văn Hiển</td>
+                                    <td>Kỳ 6</td>
+                                    <td>Thanh Hóa</td>
+                                </tr>
+                                <tr>
+                                    <td>hiennv@gmail.com</td>
+                                    <td>Nguyễn Văn Hiển</td>
+                                    <td>Kỳ 6</td>
+                                    <td>Thanh Hóa</td>
+                                </tr>
+                                <tr>
+                                    <td>hiennv@gmail.com</td>
+                                    <td>Nguyễn Văn Hiển</td>
+                                    <td>Kỳ 6</td>
+                                    <td>Thanh Hóa</td>
+                                </tr>
+                                <tr>
+                                    <td>hiennv@gmail.com</td>
+                                    <td>Nguyễn Văn Hiển</td>
+                                    <td>Kỳ 6</td>
+                                    <td>Thanh Hóa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

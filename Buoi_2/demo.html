@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="lib/bootstrap.css">
+        <link rel="stylesheet" href="lib/bootstrap.min.css">
+        <script src="lib/angular-route.js"></script>
+        <script src="lib/angular-route.js"></script>
+        <script src="lib/bootstrap.js"></script>
+        <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+        <script src="lib/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Danh sách sản phẩm</h1>
+            <br>
+            <div class="d-flex justify-content-end">
+                <button class=" btn   btn-success  ">Tạo mới sản
+                    phẩm</button>
+            </div>
+
+            <br>
+            <div class="align-items-center">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Ảnh</th>
+                            <th>Tên SP</th>
+                            <th>Danh mục</th>
+                            <th>Trạng thái</th>
+                            <th>Tương tác</th>
+                        </tr>
+                        <tr>
+                            <td>SP001</td>
+                            <td>
+                                <div
+                                    class="boder rounded bg-light overflow-hidden d-flex justify-content-center align-items-center "
+                                    style="width: 80px; height: 80px;"><img
+                                        src="img/san-pham_ao-len-01.jpeg"
+                                        class="mw-100 mh-100 "></div>
+                                <td>Sản phẩm 001</td>
+                                <td>4</td>
+                                <td> <span
+                                        class="badge  bg-success rounded-pill  ">Còn hàng</span>
+                                    </td>
+                                <td>
+                                    <button class="btn btn-primary">Xem</button>
+                                    <button
+                                        class="btn btn-warning">Sửa</button>
+                                    <button class="btn btn-danger">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SP002</td>
+                                <td><div>
+                                    <img src="" alt="">
+                                </div> </td>
+                                <td>Sản phẩm 002</td>
+                                <td>4</td>
+                                <td> <span
+                                        class="badge  bg-danger rounded-pill  ">Hết
+                                        hàng</span>
+                                    </td>
+                                <td style="width: 1px;" class="text-nowrap">
+                                    <button class="btn btn-primary">Xem</button>
+                                    <button
+                                        class="btn btn-warning">Sửa</button>
+                                    <button class="btn btn-danger">Xóa</button>
+                                </td>
+                            </tr>
+
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+        </body>
+    </html>

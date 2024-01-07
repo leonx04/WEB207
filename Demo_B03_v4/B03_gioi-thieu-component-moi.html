@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB207_TaiNguyen_thuvien</title>
+
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <h1># B03 - Giới thiệu component mới</h1>
+
+        <hr>
+        <h3># Giới thiệu navbar | dùng để làm header của trang web</h3>
+        <p>Lưu ý: Navbar phải được sử dụng ở thẻ ngoài cùng (con trực tiếp của thẻ body)</p>
+        <p>Không sử dụng navbar trong thẻ container nào cả nhé.</p>
+    </div>
+
+
+    <!-- Vị trí hợp lý để làm navbar -->
+    <!-- 1. Truy cập w3school -->
+    <!-- 2. Copy -->
+    <h6>Navbar cơ bản</h6>
+    <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container-fluid">
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <hr>
+    <h6>Navbar fix width</h6>
+    <p>Chỉ cần sửa class <code>.container-fluid</code> thành <code>.container</code></p>
+    <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container">
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <hr>
+    <h6>Đổi màu navbar</h6>
+    <p>Đổi màu nền: Đổi class bg-xxx là xong</p>
+    <p>Đổi màu chữ thành màu tối, nếu sử dụng bg màu tối .navbar-dark</p>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <hr>
+    <h6>Bổ sung thêm các component vào navbar</h6>
+    <p>Lưu ý: Navbar được apply css .d-flex và .justify-content-between</p>
+    <p>Đổ bóng cho navbar. Thêm class .shadow</p>
+    <nav class="navbar navbar-expand-sm bg-light shadow">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a href="">
+                <img src="img/logo_bootstrap.webp" style="max-height: 40px;">
+            </a>
+
+            <!-- Thông tin user -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link disabled text-dark" href="#">Xin chào Username</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Đăng xuất</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <hr>
+    <div class="container">
+        <h3># Giới thiệu nav | Để làm menu</h3>
+        <div>
+            <h6>Nav cơ bản</h6>
+            <div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <h6>Nav chiều dọc</h6>
+            <div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <h6>Tô màu item active</h6>
+            <p>Dùng class .nav-pills và .active</p>
+            <div style="width: 250px;">
+                <ul class="nav flex-column nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
+        <h1>1. Thiếu kế layout trang admin</h1>
+        <h1>2. Thiết kế trang tạo mới sản phẩm</h1>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <br><br><br><br><br>
+</body>
+</html>

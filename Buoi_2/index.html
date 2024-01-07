@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="lib/bootstrap.css">
+        <link rel="stylesheet" href="lib/bootstrap.min.css">
+        <script src="lib/angular-route.js"></script>
+        <script src="lib/angular-route.js"></script>
+        <script src="lib/bootstrap.js"></script>
+        <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+        <script src="lib/bootstrap.bundle.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Gioi thiệu font-icon</h1>
+            <div>
+                <!--
+                    1.Nhúng thư viện font-icon
+                    2. Truy cập trang tài liệu để tìm icon và sử dụng
+                 -->
+                <p>Nhúng font-icon</p>
+                <i class="fa-solid fa-magnifying-glass">Search</i>
+                <br>
+                <i class="fa-solid fa-house text fa-sm">Home</i>
+                <br>
+                <i class="fa-solid fa-cart-shopping fa-md">Gio hàng</i>
+                <br>
+                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                <br>
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                <br>
+                <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Gioi thiệu badge</h2>
+            <div>
+                <span class="badge bg-danger">Hết hàng</span>
+                <span class="badge bg-success">Thành công</span>
+
+            </div>
+            <h3>Bo tròn góc </h3>
+            <div>
+                <span class="badge bg-danger rounded-pill">Hết hàng</span>
+            </div>
+            <h4>Làm icon giỏ hàng có bộ đếm</h4>
+            <div>
+                <button class="btn position-relative pt-3 pe-4 ">
+                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                    <span
+                        class="badge  bg-danger rounded-pill position-absolute top-0 end-0">99</span>
+                </button>
+                <!--
+                    Sử dụng kỹ thuật CSS để di chuyển bộ đếm đến vị trí mong muốn
+                    Sử dụng position-relative và position-absoloute
+                -->
+            </div>
+        </div>
+
+        <div class="container">
+            <h5>Gioi thieu modal (popup)</h5>
+            <div>
+                <!-- Button to Open the Modal -->
+                <button type="button" class="btn btn-primary"
+                    data-bs-toggle="modal" data-bs-target="#ModalDelete">
+                    Xóa
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal" id="ModalDelete">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Xác nhận xóa</h4>
+                                <button type="button" class="btn-close"
+                                    data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                Bạn có chắc chắn muốn xóa không ?
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button"
+                                    class="btn btn-light">Hủy</button>
+                                <button type="button" class="btn btn-danger"
+                                    data-bs-dismiss="modal">Xóa</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3>Gioi thieu table</h3>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Email</th>
+                        <th>Sdt</th>
+                        <th>Quê quán</th>
+                    </tr>
+                    <tr>
+                        <td>Nguyễn Xuân Dũng</td>
+                        <td>Dungnxph</td>
+                        <td>0321</td>
+                        <td>Vinh</td>
+                    </tr>
+                    <tr>
+                        <td>Nguyễn Xuân Dũng</td>
+                        <td>Dungnxph</td>
+                        <td>0321</td>
+                        <td>Vinh</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="container">
+            <h3>Gioi thieu d-flex</h3>
+            <div>
+                <h6>Khai báo 3 box cần thiết</h6>
+                <div class="bg-secondary">
+                    <div class="bg-success">
+                        <div>Box 1.1</div>
+                    </div>
+
+                    <div class="bg-warning">
+                        <div>Box 2.1</div>
+                        <div>Box 2.2</div>
+                    </div>
+
+                    <div class="bg-danger">
+                        <div>Box 3.1</div>
+                        <div>Box 3.2</div>
+                        <div>Box 3.3</div>
+                    </div>
+                </div>
+                <h6>Sử dụng d-flex</h6>
+                <div class="bg-secondary d-flex">
+                    <div class="bg-success">
+                        <div>Box 1.1</div>
+                    </div>
+
+                    <div class="bg-warning">
+                        <div>Box 2.1</div>
+                        <div>Box 2.2</div>
+                    </div>
+
+                    <div class="bg-danger">
+                        <div>Box 3.1</div>
+                        <div>Box 3.2</div>
+                        <div>Box 3.3</div>
+                    </div>
+                </div>
+
+                <h6>Sử dụng d-flex kết hợp với justify-content (để căn
+                    trái phải)</h6>
+                <div class="bg-secondary d-flex justify-content-between">
+                    <div class="bg-success">
+                        <div>Box 1.1</div>
+                    </div>
+
+                    <div class="bg-warning">
+                        <div>Box 2.1</div>
+                        <div>Box 2.2</div>
+                    </div>
+
+                    <div class="bg-danger">
+                        <div>Box 3.1</div>
+                        <div>Box 3.2</div>
+                        <div>Box 3.3</div>
+                    </div>
+                </div>
+            </div>
+
+            <h6>Sử dụng d-flex kết hợp với align-item (để căn trên
+                dưới)</h6>
+            <div
+                class="bg-secondary d-flex align-items-center justify-content-center">
+                <div class="bg-success">
+                    <div>Box 1.1</div>
+                </div>
+
+                <div class="bg-warning">
+                    <div>Box 2.1</div>
+                    <div>Box 2.2</div>
+                </div>
+
+                <div class="bg-danger">
+                    <div>Box 3.1</div>
+                    <div>Box 3.2</div>
+                    <div>Box 3.3</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
