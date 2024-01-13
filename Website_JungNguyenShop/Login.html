@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
-    <!-- Icon của trang -->
+    <title>Shop mô hình Jung Nguyen | Đăng nhập</title>
     <link rel="icon" href="img/logo.png" type="image/png">
-    <!-- Sử dụng Bootstrap CSS -->
     <link rel="stylesheet" href="lib/bootstrap.css">
-    <!-- Sử dụng Bootstrap JavaScript -->
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <script src="lib/angular-route.js"></script>
+    <script src="lib/angular-route.js"></script>
     <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="lib/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -33,7 +36,13 @@
                 <!-- Ô nhập mật khẩu -->
                 <div class="mb-3">
                     <label class="form-label">Mật khẩu</label>
-                    <input class="form-control" type="password" placeholder="Nhập mật khẩu">
+                    <input class="form-control" type="password" placeholder="Nhập mật khẩu" id="passwordInput">
+                </div>
+
+                <!-- Ô checkbox cho hiển thị mật khẩu -->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="ShowPASS">
+                    <label class="form-check-label" for="ShowPASS">Hiển thị mật khẩu</label>
                 </div>
 
                 <!-- Nút đăng nhập -->
@@ -54,6 +63,15 @@
             </form>
         </div>
     </div>
-</body>
 
+    <!-- Script JavaScript -->
+    <script>
+        document.getElementById('ShowPASS').addEventListener('change', function () {
+            var passwordInput = document.getElementById('passwordInput');
+            passwordInput.type = this.checked ? 'text' : 'password';
+        });
+    </script>
+
+</body>
+    
 </html>
