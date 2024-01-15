@@ -13,12 +13,12 @@
     <script src="lib/bootstrap.js"></script>
 </head>
 
-<body>
+<body style="background-image: url('img/Gundam-Super-Robot-Wars-Mobile-Suit-Zeta-Gundam-Zeta-Gundam-2113069-wallhere.com.jpg'); background-size: cover; height: 100vh; margin: 0;">
     <!-- Container chứa toàn bộ nội dung trang -->
-    <div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="container d-flex align-items-center justify-content-center vh-100 text-white">
         <!-- Container chứa form đăng ký -->
         <div class="login-container"
-            style="max-width: 400px; width: 100%; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #ffffff; box-shadow: 0 0 10px rgba(17, 12, 12, 0.1);">
+            style="max-width: 400px; width: 100%; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(17, 12, 12, 0.1);backdrop-filter: blur(5px);">
             <!-- Tiêu đề của form -->
             <h3 class="text-center mb-4">Đăng ký</h3>
 
@@ -47,7 +47,7 @@
                     <input type="checkbox" class="form-check-input" id="ShowPASS">
                     <label class="form-check-label" for="ShowPASS">Hiển thị mật khẩu</label>
                 </div>
-                
+
                 <!-- Ô nhập Xác nhận mật khẩu -->
                 <div class="mb-3">
                     <label class="form-label">Xác nhận mật khẩu</label>
@@ -73,16 +73,16 @@
                 </div>
 
                 <!-- Modal cho điều khoản và điều kiện -->
-                <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel"
+                <div class="modal fade text-black" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-dialog modal-dialog-centered ">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="termsModalLabel">Điều khoản và Điều kiện</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body ">
                                 <h2>Điều khoản chung</h2>
                                 <ul>
                                     <li>Phạm vi điều chỉnh: Điều khoản này quy định về việc sử dụng website bán hàng và
@@ -166,8 +166,8 @@
 
                 <br>
                 <!-- Nút chuyển đến trang đăng ký -->
-                <div class="mb-3 text-center">
-                    <small class="text-muted">Đã có tài khoản? <a href="Login.html">Đăng nhập ngay</a></small>
+                <div class="mb-3 text-center ">
+                    <small class="text-white">Đã có tài khoản? <a href="Login.html" class="text-info">Đăng nhập ngay</a></small>
                 </div>
             </form>
         </div>

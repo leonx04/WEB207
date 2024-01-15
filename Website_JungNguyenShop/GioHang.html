@@ -121,7 +121,7 @@
 
     <div class="container" style="min-height: calc(100vh - 131px);">
         <!--Cột kèm nút chọn tất cả-->
-        <div class="row d-flex  mt-5 border rounded-1 p-3 justify-content-between">
+        <div class="row d-flex  mt-5 border rounded-1 p-3 justify-content-between ">
             <div class="col-6 d-flex align-items-center">
                 <div class="col-2 d-flex align-items-center ml-auto">
                     <input class="SelectAllSP" type="checkbox" name="" title="Chọn tất cả sản phẩm"
@@ -138,7 +138,6 @@
                 <div class="col-2">Thao Tác</div>
             </div>
         </div>
-
         <!--Sản phẩm -->
         <div class="product row d-flex  mt-5 border rounded-1 p-3 justify-content-between">
             <div class="col-6 d-flex align-items-center">
@@ -206,8 +205,6 @@
                 </div>
             </div>
         </div>
-
-
         <!--Sản phẩm -->
         <div class="product row d-flex  mt-5 border rounded-1 p-3 justify-content-between">
             <div class="col-6 d-flex align-items-center">
@@ -276,13 +273,214 @@
             </div>
         </div>
 
+        <!--Sản phẩm -->
+        <div class="product row d-flex  mt-5 border rounded-1 p-3 justify-content-between">
+            <div class="col-6 d-flex align-items-center">
+                <div class="col-2 d-flex align-items-center ml-auto">
+                    <input class="SelectSP" type="checkbox" name="" title="Chọn mua cả sản phẩm"
+                        onclick="changeCheckboxSP(this)">
+                </div>
+
+                <div class="col-2">
+                    <div class="ratio ratio-1x1" style="">
+                        <div class="bg-light">
+                            <img src="img/Gundam_HG_Unicorn_1_144.jpg" class="mw-100 mh-100 rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 " style="max-width: max-content; margin: auto;">
+                    <a href="Gundam_HG_Unicorn.html" class="text-dark-emphasis  ratio" style="text-decoration: none;"
+                        title="Gundam HG Unicorn Size 1/144">
+                        Gundam HG Unicorn Size 1/144
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-6 d-flex justify-content-between align-items-center">
+                <div class="col-2 text-center " style="max-width: max-content;">
+                    <div class=" align-items-md-center">
+                        <p class=" text-warning text-sm-center">189.000 vnđ</p>
+                        <span class=" text-decoration-line-through text-sm">300.000 vnđ</span>
+                    </div>
+                </div>
+
+                <div class="col-2 d-flex " style="max-width: fit-content;">
+                    <div class="input-group d-flex">
+                        <!-- Lớp "input-group" của Bootstrap được sử dụng để nhóm các thành phần input và button lại với nhau.
+                                                         Lớp "d-flex" ở đây cũng giúp sử dụng flexbox. -->
+
+                        <button class="PlusT btn btn-outline-secondary btn-sm " type="button" id="decrease-btn"
+                            title="Giảm số lượng sản phẩm">-</button>
+                        <!-- Đây là một nút giảm giá trị, sử dụng lớp "btn btn-outline-secondary btn-sm" của Bootstrap. 
+                                                         Nút này có id "decrease-btn" để có thể được thao tác với JavaScript. -->
+
+                        <input type="text" class="ValS form-control text-center fa-xs" value="1" id="quantity-input"
+                            aria-label="Quantity" aria-describedby="quantity-input">
+                        <!-- Đây là một input để hiển thị và nhập giá trị số lượng.
+                                                         Lớp "form-control" là một lớp của Bootstrap để tạo input có chiều cao phù hợp.
+                                                         "text-center" là lớp để căn giữa nội dung của input. 
+                                                         Giá trị mặc định là 1, và nó có id "quantity-input" để có thể được thao tác bằng JavaScript. -->
+
+                        <button class="PlushC btn btn-outline-secondary btn-sm " type="button" id="increase-btn"
+                            title="Tăng số lượng sản phẩm">+</button>
+                        <!-- Đây là một nút tăng giá trị, cũng sử dụng lớp "btn btn-outline-secondary btn-sm" của Bootstrap. 
+                                                         Nút này có id "increase-btn" để có thể được thao tác với JavaScript. -->
+                    </div>
+                </div>
 
 
+                <div class="thanhtienCol col-2" style="max-width: fit-content;" id="thanhtienColum">189.000 vnđ
+                </div>
+                <div class="col-2">
+                    <a class="btn btn-danger" id="deleted_sp">
+                        Xóa
+                    </a>
+                </div>
+            </div>
+        </div>
 
+        <!--Sản phẩm -->
+        <div class="product row d-flex  mt-5 border rounded-1 p-3 justify-content-between">
+            <div class="col-6 d-flex align-items-center">
+                <div class="col-2 d-flex align-items-center ml-auto">
+                    <input class="SelectSP" type="checkbox" name="" title="Chọn mua cả sản phẩm"
+                        onclick="changeCheckboxSP(this)">
+                </div>
+
+                <div class="col-2">
+                    <div class="ratio ratio-1x1" style="">
+                        <div class="bg-light">
+                            <img src="img/Gundam_HG_Unicorn_1_144.jpg" class="mw-100 mh-100 rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 " style="max-width: max-content; margin: auto;">
+                    <a href="Gundam_HG_Unicorn.html" class="text-dark-emphasis  ratio" style="text-decoration: none;"
+                        title="Gundam HG Unicorn Size 1/144">
+                        Gundam HG Unicorn Size 1/144
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-6 d-flex justify-content-between align-items-center">
+                <div class="col-2 text-center " style="max-width: max-content;">
+                    <div class=" align-items-md-center">
+                        <p class=" text-warning text-sm-center">189.000 vnđ</p>
+                        <span class=" text-decoration-line-through text-sm">300.000 vnđ</span>
+                    </div>
+                </div>
+
+                <div class="col-2 d-flex " style="max-width: fit-content;">
+                    <div class="input-group d-flex">
+                        <!-- Lớp "input-group" của Bootstrap được sử dụng để nhóm các thành phần input và button lại với nhau.
+                                                         Lớp "d-flex" ở đây cũng giúp sử dụng flexbox. -->
+
+                        <button class="PlusT btn btn-outline-secondary btn-sm " type="button" id="decrease-btn"
+                            title="Giảm số lượng sản phẩm">-</button>
+                        <!-- Đây là một nút giảm giá trị, sử dụng lớp "btn btn-outline-secondary btn-sm" của Bootstrap. 
+                                                         Nút này có id "decrease-btn" để có thể được thao tác với JavaScript. -->
+
+                        <input type="text" class="ValS form-control text-center fa-xs" value="1" id="quantity-input"
+                            aria-label="Quantity" aria-describedby="quantity-input">
+                        <!-- Đây là một input để hiển thị và nhập giá trị số lượng.
+                                                         Lớp "form-control" là một lớp của Bootstrap để tạo input có chiều cao phù hợp.
+                                                         "text-center" là lớp để căn giữa nội dung của input. 
+                                                         Giá trị mặc định là 1, và nó có id "quantity-input" để có thể được thao tác bằng JavaScript. -->
+
+                        <button class="PlushC btn btn-outline-secondary btn-sm " type="button" id="increase-btn"
+                            title="Tăng số lượng sản phẩm">+</button>
+                        <!-- Đây là một nút tăng giá trị, cũng sử dụng lớp "btn btn-outline-secondary btn-sm" của Bootstrap. 
+                                                         Nút này có id "increase-btn" để có thể được thao tác với JavaScript. -->
+                    </div>
+                </div>
+
+
+                <div class="thanhtienCol col-2" style="max-width: fit-content;" id="thanhtienColum">189.000 vnđ
+                </div>
+                <div class="col-2">
+                    <a class="btn btn-danger" id="deleted_sp">
+                        Xóa
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Sản phẩm -->
+        <div class="product row d-flex  mt-5 border rounded-1 p-3 justify-content-between">
+            <div class="col-6 d-flex align-items-center">
+                <div class="col-2 d-flex align-items-center ml-auto">
+                    <input class="SelectSP" type="checkbox" name="" title="Chọn mua cả sản phẩm"
+                        onclick="changeCheckboxSP(this)">
+                </div>
+
+                <div class="col-2">
+                    <div class="ratio ratio-1x1" style="">
+                        <div class="bg-light">
+                            <img src="img/Gundam_HG_Unicorn_1_144.jpg" class="mw-100 mh-100 rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 " style="max-width: max-content; margin: auto;">
+                    <a href="Gundam_HG_Unicorn.html" class="text-dark-emphasis  ratio" style="text-decoration: none;"
+                        title="Gundam HG Unicorn Size 1/144">
+                        Gundam HG Unicorn Size 1/144
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-6 d-flex justify-content-between align-items-center">
+                <div class="col-2 text-center " style="max-width: max-content;">
+                    <div class=" align-items-md-center">
+                        <p class=" text-warning text-sm-center">189.000 vnđ</p>
+                        <span class=" text-decoration-line-through text-sm">300.000 vnđ</span>
+                    </div>
+                </div>
+
+                <div class="col-2 d-flex " style="max-width: fit-content;">
+                    <div class="input-group d-flex">
+                        <!-- Lớp "input-group" của Bootstrap được sử dụng để nhóm các thành phần input và button lại với nhau.
+                                                         Lớp "d-flex" ở đây cũng giúp sử dụng flexbox. -->
+
+                        <button class="PlusT btn btn-outline-secondary btn-sm " type="button" id="decrease-btn"
+                            title="Giảm số lượng sản phẩm">-</button>
+                        <!-- Đây là một nút giảm giá trị, sử dụng lớp "btn btn-outline-secondary btn-sm" của Bootstrap. 
+                                                         Nút này có id "decrease-btn" để có thể được thao tác với JavaScript. -->
+
+                        <input type="text" class="ValS form-control text-center fa-xs" value="1" id="quantity-input"
+                            aria-label="Quantity" aria-describedby="quantity-input">
+                        <!-- Đây là một input để hiển thị và nhập giá trị số lượng.
+                                                         Lớp "form-control" là một lớp của Bootstrap để tạo input có chiều cao phù hợp.
+                                                         "text-center" là lớp để căn giữa nội dung của input. 
+                                                         Giá trị mặc định là 1, và nó có id "quantity-input" để có thể được thao tác bằng JavaScript. -->
+
+                        <button class="PlushC btn btn-outline-secondary btn-sm " type="button" id="increase-btn"
+                            title="Tăng số lượng sản phẩm">+</button>
+                        <!-- Đây là một nút tăng giá trị, cũng sử dụng lớp "btn btn-outline-secondary btn-sm" của Bootstrap. 
+                                                         Nút này có id "increase-btn" để có thể được thao tác với JavaScript. -->
+                    </div>
+                </div>
+
+
+                <div class="thanhtienCol col-2" style="max-width: fit-content;" id="thanhtienColum">189.000 vnđ
+                </div>
+                <div class="col-2">
+                    <a class="btn btn-danger" id="deleted_sp">
+                        Xóa
+                    </a>
+                </div>
+            </div>
+        </div>
 
 
 
     </div>
+
 
     <!--Khu vực footer-->
     <div class="container-fluid bg-light border-top mt-2 ">
