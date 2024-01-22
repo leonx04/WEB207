@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WEB207_TaiNguyen_thuvien</title>
+
     <!-- Nhúng Bootstrap -->
     <link rel="stylesheet" href="lib/bootstrap.css">
     <script src="lib/bootstrap.js"></script>
@@ -16,108 +17,129 @@
     <script src="lib/angular.js"></script>
     <!-- <script src="lib/angular-route.js"></script> -->
 
-    <!-- khu vực viết code logic JS -->
+    <!-- Khu vuc ng-controller bindingCtrl -->
     <script>
-        var app = angular.module('myApp', [])
-
-        //Khởi tạo controller
-        app.controller('bindingColler', function ($scope) {
-            //Khu vực viết code logic 
-            console.log("Xin chào")
+        var app = angular.module('myApp', []);
 
 
-            //Khai báo biến demo  data binding
-            $scope.tenBien = "Gia tri biến";
-            $scope.maMon = "WEB2017";
+        app.controller('bindingCtrl', function ($scope) {
+            console.log('Violet Evergarden');
+
+            //Khai bao bien demo data binding
+            $scope.tenbien = "Gia tri bien";
+            $scope.maMon = "WEB207";
             $scope.namSinh = 2004;
-            $scope.danhSachMaSV = ['ph1012', 'ph111'];
+            $scope.danhSachMaSV = ['ph3423', 'ph34543', 'ph35345']
 
-            //kHAI BAO BIEN DEMO property binding
-            $scope.cauNoiYeuThich = 'k LAM DOI CO AN';
-            $scope.imgURL = 'img/banner_01.jpg';
+            //Bien demo property binding
+            $scope.cauNoiYeuThich = 'Violet Evergarden';
+            $scope.imgUrl = 'img/logo_bootstrap.webp';
 
-            //Khai bao hàm demo event binding
+
+
+            // Khai bao ham demo event binding
             $scope.tenHam = function () { };
-            $scope.onClickDKY = function () {
-                alert("DANG KY THANH CONG");
+            $scope.onClickDangKy = function () {
+                alert('dang ky thanh cong');
             }
 
-            //Khai bao bien demo tow-way binding 
+            //Khai bao bien demo two-way binding
             $scope.hoTen = 'Violet Evergarden';
 
-            //Khai bao so luong san pham
-            $scope.soLuongSP = 0;
-        })
 
+            // Khai bao 1 vai tinh nang cho viec hien thi
+            $scope.soLuongSanPham = 0;
+
+
+        });
     </script>
-
 </head>
 
 <body ng-app="myApp">
-    // Khởi tạo ng-app có tên myApp
+    <!-- Khoi tao ng-app co ten myApp -->
+    <!-- Khoi tao ng-controller co ten "bindingCtrl" -->
+    <div class="container-fluid" ng-controller="bindingCtrl">
 
-    <div class="container-fluid" ng-controller="bindingColler">
-        <h1>Binding xin chào</h1>
-        <h3></h3>
-        <p>Dùng để hiển thị giá trị của biến ra html</p>
-        <p>Như chúng ta đã học , JS có 3 cách khai báo biến </p>
-        <p>var , let , cost</p>
-        <p>AngularJS gioi thieu thêm 1 kiểu khai báo biến nữa gọi là $scope</p>
-        <p>Dùng để hiển thị biến ra html nhanh gọn</p>
+        <h3>#Gioi thieu ve data binding</h3>
+        <p>Dung de hien thi gia tri cua bien ra html</p>
+        <p>Javascript co cac cach khai bao bien: var, let, const</p>
+        <p>Angular gioi thieu them 1 kieu khai bao nua goi la: $scope</p>
+        <p>dung de hien thi bien ra html nhanh gon</p>
 
-        <p>{{ tenBien }}</p>
-        <p>Ma Mon :{{maMon}}</p>
-        <p>Nam sinh : {{namSinh}}</p>
-        <p>Danh sach : {{ danhSachMaSV }}</p>
+        <p>Ma mon: {{maMon}}</p>
+        <p>Ten bien: {{tenbien}}</p>
+        <p>Nam sinh: {{namSinh}}</p>
+        <p>Danh sach ma sinh vien: {{danhSachMaSV}}</p>
+        <!--  cach in du lieu kieu mang -->
         <ul>
             <li ng-repeat="item in danhSachMaSV">
-                {{ item }}
+                {{item}}
             </li>
         </ul>
+
+
         <hr>
-        <h3>Gioi thiệu property binding</h3>
-        <p>Dùng để in ra giá trị biến r propery của 1 thẻ html</p>
-        <h6>In ra giá trị biến ra property của thẻ input</h6>
-        <input type="text" class="form-control" value="{{cauNoiYeuThich}}">
-        <input type="text" class="form-control" ng-value="cauNoiYeuThich">
-        <hr>
-        <h6>In ra gia tri bien ra property src của thẻ img</h6>
-        <img src="img/banner_01.jpg" style="height: 60px;">
-        <hr>
-        <img ng-src="{{imgURL}}" style="height: 60px;">
-        <hr>
-        <h3>Gioi thiệu event binding</h3>
+        <h3>#Gioi thieu property binding</h3>
+
         <div>
-            <h6>Dùng để bắt sự kiện tương tác của người dùng (click, change)</h6>
+            <p>dung de in gia tri bien ra property cau 1 the html</p>
+            <h6>In gia tri bien ra property value cua the html</h6>
+            <input type="text" class="form-control" value="{{cauNoiYeuThich}}">
+            // Hoac
+            <input type="text" class="form-control" ng-value="cauNoiYeuThich">
 
 
-            <button class="btn btn-primary" ng-click="onClickDKY()">Đăng ký</button>
+
+            <h6>in gia tri bien ra property src cua the img</h6>
+            <img src="img/logo_bootstrap.webp" style="height: 60px;">
+            <img ng-src="{{imgUrl}}" style="height: 60px;">
+
         </div>
 
         <hr>
-        <h3>Gioi thieu two-way data binding</h3>
+        <h3>#Gioi thieu event binding</h3>
         <div>
-            <p>Tự động đồng bộ dữ liệu 2 chiều giữa code js và html </p>
-            <p>Tức là khi html thay đổi giá trị thì biến trong code js tự động nhận giá trị mới </p>
-            <p>Ngược lại khi code js thay đổi giá trị biến, html tự động hiển thị giá trị mới</p>
+            <p>dung de bat su kien tuong tac cua nguoi dung(click, change, blur,...)</p>
 
-            <span class="form-label">Moi nhap ho ten</span>
+            <h3>Bat su kien click</h3>
+            <button class="btn btn-primary" ng-click="onClickDangKy()"> Dang ky</button>
+
+        </div>
+
+
+        <hr>
+        <h3>#Gioi thieu two-way data binding</h3>
+        <div>
+            <p>Tu dong dong bo du lieu (2 chieu) giua code js va html</p>
+            <p>Tuc la khi code html thay doi gia tri thi bien trong code js tu dong nhan gia tri moi</p>
+            <p>Va nguoc lai khi code js thay doi gia tri bien, thi html tu dong thay hien thi gia tri</p>
+
+            <span class="form-label"> Moi ban nhap ho ten: </span>
             <input type="text" class="form-control" ng-model="hoTen">
-            <p>Họ tên bạn là :{{hoTen}} </p>
+            <p>Ho ten cua ban la: {{hoTen}}</p>
         </div>
 
+        <hr>
+        <h3>#Gioi thieu them 1 vai tinh nang cho viec hien thi</h3>
 
-        <hr>
-        <h3>Gioi thieu một vài tính năng cho hiển thị</h3>
-        <h6>ng-show | ng-hide </h6>
-        <span class=" badge bg-success" ng-show="soLuongSP > 0">Còn hàng</span>
-        <span class="badge bg-warning" ng-show="soLuongSP <= 0">Hết hàng</span>
-        <hr>
-        <h6>ng-if </h6>
-        <span class="badge bg-success" ng-if="soLuongSP > 0">Còn hàng</span>
-        <span class="badge bg-warning" ng-if="soLuongSP <= 0">Hết hàng</span>
+        <input type="text" class="form-control" ng-model="soLuongSanPham">
+        <h6>ng-show | ng-hide</h6>
+        <!-- ng-hide laf nguoc lai voi ng-show -->
+        <span class="badge bg-success" ng-show="soLuongSanPham > 0">Con hang</span>
+        <span class="badge bg-danger" ng-show="soLuongSanPham <= 0">Het hang</span>
+
+        <!-- ng-hide -->
+        <span class="badge bg-success" ng-hide="soLuongSanPham > 0">Con hang</span>
+        <span class="badge bg-danger" ng-hide="soLuongSanPham <= 0">Het hang</span>
+
+
+        <h6>ng-if</h6>
+        <span class="badge bg-success" ng-if="soLuongSanPham > 0">Con hang</span>
+        <span class="badge bg-danger" ng-if="soLuongSanPham <= 0">Het hang</span>
+
     </div>
 
+    <br><br><br><br><br><br>
 </body>
 
 </html>

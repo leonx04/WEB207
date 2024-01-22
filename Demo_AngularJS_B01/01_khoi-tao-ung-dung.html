@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+
+    <!-- Nhúng Font Icon -->
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+
+    <!-- Nhúng AngularJS -->
+    <script src="lib/angular.js"></script>
+    <!-- <script src="lib/angular-route.js"></script> -->
+
+    <!-- khu vực viết code logic JS -->
+    <script>
+        //2.2: khởi tạo ng-app
+        var app = angular.module('myApp', []);
+
+        //3.2:khởi tạo ng-controller
+        app.controller('nameCtrl', function(){
+            //khu vực viết code logic của nameCrtl
+            console.log("Phương đẹp zai")
+
+
+
+
+
+
+
+
+        })
+    </script>
+
+</head>
+<body ng-app="myApp">
+    <div class="container-fluid">
+        <h3>khời tạo ud angularJS</h3>
+        <p>1 Nhúng thư viện</p>
+
+        
+        <p>2. khởi tạo ng-app</p>
+        <p>2.1: khởi tạo tại code html</p>
+        <p>2.2: khởi tạo tại code JS</p>
+
+        <p>3. khởi khởitaoj ng-controller</p>
+        <p>3.1: khởi tạo tại code html</p>
+        <p>3.2: khởi tạo tại code JS</p>
+        <div ng-controller="nameCtrl">
+            <!-- lưu ý: tất cả code html của nameCtrl phải được viết trong này -->
+
+        </div>
+    </div>
+</body>
+</html>

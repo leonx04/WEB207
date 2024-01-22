@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+    <!-- Nhúng AngularJS -->
+    <script src="lib/angular.js"></script>
+
+    <script>
+        // Khoi tao ng-app
+        var app = angular.module('myApp', []);
+        // Khoi tao ng-controller
+        app.controller('danhSachSanPhamCtrl', function ($scope, $http) {
+            console.log('Violet Evergarden');
+
+            // Khai bao cac bien can thiet
+            $scope.danhSachSanPham = [];
+            $scope.danhSachDanhMuc = [];
+
+            // Call api lay danh sach san pham
+            $http({
+                method: 'GET',
+                url: 'http://localhost:3000/san-pham'
+            }).then(function (response) {
+                // Viet code logic xu ly du lieu khi call api thanh cong
+
+                // log thu du lieu cua bien reponse
+                console.log("Du lieu api tra ve:", response.data);
+
+                // 1.gan du lieu vao bien $scope.danhSachSanPham
+                $scope.danhSachSanPham = response.data;
+
+            })
+
+        });
+    </script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-controller="danhSachSanPhamCtrl">
+        <!-- Khu vuc tieu de trang -->
+        <h1>Danh sach san pham</h1>
+        <br>
+        <!-- Ku vuc button chinhs -->
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-success"> Tao moi san pham</button>
+        </div>
+        <!-- Khu vuc table -->
+        <br>
+        <div>
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Anh</th>
+                        <th>Ten san pham</th>
+                        <th>Danh muc</th>
+                        <!-- <th>Trang thai</th> -->
+                        <th>Tuong tac</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in danhSachSanPham">
+                        <td>{{item.id}}</td>
+                        <td>
+                            <div class="border rounded bg-light overflow-hidden d-flex justify-content-center align-items-center"
+                                style="width: 100px ; height: 100px;">
+                                <img src="img/san-pham_ao-len-01.jpeg" class="mw-100 mh-100">
+                            </div>
+                        </td>
+                        <td>{{item.ten}}</td>
+                        <td>{{item.idDanhMuc}}</td>
+                        <!-- <td>
+                            <span class="badge bg-success rounded-pill">Con hang</span>
+                        </td> -->
+                        <td style="width: 1px;" class="text-nowrap">
+                            <div>
+                                <button class="btn btn-primary btn-sm">Xem</button>
+                                <button class="btn btn-warning btn-sm">Sua</button>
+                                <button class="btn btn-danger btn-sm">Xoa</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td>SP002</td>
+                        <td>
+                            <div class="border rounded bg-light overflow-hidden d-flex justify-content-center align-items-center"
+                                style="width: 100px ; height: 100px;">
+                                <img src="img/banner_01.jpg" class="mw-100 mh-100">
+                            </div>
+                        </td>
+                        <td>San pham 002</td>
+                        <td>4</td> -->
+                    <!-- <td>
+                            <span class="badge bg-danger rounded-pill">Het hang</span>
+                        </td> -->
+                    <!-- <td>
+                            <div>
+                                <button class="btn btn-primary btn-sm">Xem</button>
+                                <button class="btn btn-warning btn-sm">Sua</button>
+                                <button class="btn btn-danger btn-sm">Xoa</button>
+                            </div>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Khu vuc phan trang-->
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

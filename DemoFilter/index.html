@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+    <!-- Nhúng AngularJS -->
+    <script src="lib/angular.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.controller('nameCtrl', function ($scope, $http) {
+
+            $scope.danhsachSP = [];
+            $scope.danhsachDM = [];
+
+            $http({
+                method: 'GET',
+                url: 'http://localhost:3000/san-pham'
+            }).then(function (reponse) {
+                console.log("Success sản phẩm!");
+
+                $scope.danhsachSP = reponse.data;
+            })
+
+            $http({
+                method: 'GET',
+                url: 'http://localhost:3000/danh-muc'
+            }).then(function (reponse) {
+                console.log("Success danh mục!");
+
+                $scope.danhsachDM = reponse.data;
+            })
+
+            $scope.onClickDM = function (id) {
+                console.log('Danh sach được chọn :' + id);
+
+                $http({
+                    method: 'GET',
+                    url: 'http://localhost:3000/san-pham',
+                    params: {
+                        idDanhMuc: id
+                    }
+                }).then(function (response) {
+                    console.log('Dữ liệu api trả về:', response.data);
+
+                    $scope.danhsachSP = response.data;
+                });
+            }
+        })
+    </script>
+</head>
+
+<body ng-app="myApp">
+
+    <div ng-controller="nameCtrl">
+
+        <button class="btn btn-light" ng-click="onClickDM(null)">Tất cả</button>
+        <button class="btn btn-light" ng-repeat="item in danhsachDM" ng-click="onClickDM(item.id)">
+            {{ item.ten }}
+        </button>
+
+        <hr>
+        <div class="mt-5 ">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Mã SP</th>
+                        <th>Tên SP</th>
+                        <th>Ảnh</th>
+                        <th>Gía bán</th>
+                        <th>Gía niêm yết</th>
+                        <th>Mã Danh mục</th>
+                        <th>Tên danh mục</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in danhsachSP">
+                        <td>{{item.id}}</td>
+                        <td>{{item.ten}}</td>
+                        <td>
+                            <div class="border rounded bg-light overflow-hidden d-flex justify-content-center align-items-center"
+                                style="width: 100px ; height: 100px;">
+                                <img src="{{item.anh}}" class="mw-100 mh-100">
+                            </div>
+                        </td>
+                        <td>{{item.giaNiemYet}}</td>
+                        <td>{{item.giaNiemYet}}</td>
+                        <td>{{item.idDanhMuc}}</td>
+                        <td >{{item.tenDanhMuc}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

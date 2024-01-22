@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB207_TaiNguyen_thuvien</title>
+
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+
+    <!-- Nhúng Font Icon -->
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+
+    <!-- Nhúng AngularJS -->
+    <script src="lib/angular.js"></script>
+
+    <!-- Khu vuc viet code logic js -->
+    <script>
+        // 2.2 khoi tao ng-app
+        var app = angular.module('myApp', []);
+
+        //3.2 khoi tao ng-controller
+        app.controller('nameCtrl', function(){
+            //Khu vuc viet code logic cua nameCtrl
+            console.log('Violet Evergarden');
+
+
+
+
+        });
+
+    </script>
+    
+</head>
+<body ng-app="myApp">
+    <div class="container-fluid">
+        <h3>Khoi tao ung dung Angular</h3>
+        <p>1.Nhung thu vien angular</p>
+
+        <p>2.Khoi tao ng-app</p>
+        <p>2.1. Khoi tao tai code html</p>
+        <p>2.2. Khoi tao tai code JS</p>
+
+        <p>3. Khoi tao ng-controller</p>
+        <p>3.1. Khoi tao tai code html</p>
+        <div ng-controller="nameCtrl">
+            <!-- Luu y: tat ca code html cua nameCtrl phai duoc viet trong nay -->
+        </div>
+    </div>
+</body>
+</html>

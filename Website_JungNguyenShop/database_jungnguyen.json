@@ -1,0 +1,142 @@
+{
+  "danh-muc": [
+    {
+      "id": "SD",
+      "ten": "SD (Super Deformed)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "HG",
+      "ten": "HG (High Grade)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "RG",
+      "ten": "RG (Real Grade)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "MG",
+      "ten": "MG (Master Grade)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "RE",
+      "ten": "RE/100 (Real Entry Grade)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "PG",
+      "ten": "PG (Perfect Grade)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "FM",
+      "ten": "FM (Full Mechanics)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "NG",
+      "ten": "NG (No Grade)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "PG Unleashed ",
+      "ten": "PG Unleashed (Perfect Grade Unleashed)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "MSM",
+      "ten": "MSM (Mega Size Model)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "RAH",
+      "ten": "RAH (Real Action Heroes)",
+      "mo-ta": "Tỉ lệ từ 1:300 đến 1:600",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    }
+  ],
+  "san-pham": [
+    {
+      "id": "SP01",
+      "ten": "Gundam Landline Mecha",
+      "hinh_anh": "img/144LandlineMecha.jpg",
+      "danh_muc": "HG",
+      "gia_niem_yet": "390.000 vnđ",
+      "gia_ban": "299.000 vnđ",
+      "uu_dai": "99%",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "SP02",
+      "ten": "Gundam HG Unicorn",
+      "hinh_anh": "img/Gundam_HG_Unicorn_1_144.jpg",
+      "danh_muc": "RG",
+      "gia_niem_yet": "300.000 vnđ",
+      "gia_ban": "189.000 vnđ",
+      "uu_dai": "99%",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "id": "SP03",
+      "ten": "Gundam Butterfly Blue",
+      "hinh_anh": "img/Gumdam_buttefly_1_144.jpg",
+      "danh_muc": "SD",
+      "gia_niem_yet": "360.000 vnđ",
+      "gia_ban": "259.000 vnđ",
+      "uu_dai": "99%",
+      "ngay_tao": "13/01/2024",
+      "ngay_cap_nhat": "14/01/2024",
+      "trang_thai": "Đang bán"
+    },
+    {
+      "ten": "NORMA UNX-04S HUNTER",
+      "id": "SP04",
+      "hinh_anh": "img/Norma_UNX_04S_Hunter_Kainar_A_Type_2.jpg",
+      "danh_muc": "HG",
+      "gia_niem_yet": "399.000 vnđ",
+      "gia_ban": "299.000 vnđ",
+      "uu_dai": "80%",
+      "trang_thai": "Đang bán",
+      "ngay_tao": "20:23:00 17/1/2024",
+      "ngay_cap_nhat": "20:23:00 17/1/2024"
+    }
+  ]
+}

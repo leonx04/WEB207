@@ -1,0 +1,46 @@
+{
+    "danh-muc": [
+        {
+            "id": "DM01",
+            "ten": "Kem Nền"
+        },
+        {
+            "id": "DM02",
+            "ten": "Phấn Mắt"
+        },
+        {
+            "id": "DM03",
+            "ten": "Son"
+        }
+    ],
+    "san-pham": [
+        {
+            "id": "SP001",
+            "ten": "KEM NỀN MAC NC15 STUDIO FIX FLUID SPF15 30ML",
+            "anh": "img/san-pham_kem-nen-01.png",
+            "idDanhMuc": "DM01",
+            "tenDanhMuc": "Kem Nền"
+        },
+        {
+            "id": "SP002",
+            "ten": "PHẤN MẮT MAC EYE SHADOW - AMBER LIGHT FROST",
+            "anh": "img/san-pham_phan-mat-01.png",
+            "idDanhMuc": "DM02",
+            "tenDanhMuc": "Phấn Mắt"
+        },
+        {
+            "id": "SP003",
+            "ten": "SON KEM LÌ MAC POWDER KISS LIQUID LIPCOLOUR COULEUR A LEVRES",
+            "anh": "img/san-pham_son-00.jpg",
+            "idDanhMuc": "DM03",
+            "tenDanhMuc": "Son"
+        },
+        {
+            "id": "SP004",
+            "ten": "SON MAC POWDER KISS LIPSTICK",
+            "anh": "img/san-pham_son-01.jpg",
+            "idDanhMuc": "DM03",
+            "tenDanhMuc": "Son"
+        }
+    ]
+}
