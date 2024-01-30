@@ -1,0 +1,197 @@
+<div>
+    <div class="mt-1 border rounded p-3 bg-secondary-subtle">
+        <a href="#" class="text-black" style="text-decoration: none;">Trang chủ
+        </a> /
+        <a href="#!Tim-Kiem" class="text-black" style="text-decoration: none;">Sản phẩm</a>
+        /
+        <a class="text-danger" style="text-decoration: none;" href="#!Detail-product/{{product.id}}">{{product.ten}}
+        </a>
+    </div>
+
+    <div class="border rounded-1 mt-2 ">
+        <div class="row">
+            <!-- Khu vực ảnh sản phẩm -->
+            <div class="col-md-5 col-5 col-12  mb-0 d-flex justify-content-center">
+                <div class="ratio ratio-1x1">
+                    <img ng-src="{{product.hinh_anh}}" class="img-fluid rounded">
+                </div>
+            </div>
+
+            <!-- Khu vực thông tin sản phẩm -->
+            <div class="col-md-7">
+                <h2 ng-model="product.ten" class="mb-3">{{product.ten}}</h2>
+
+                <!-- Đánh giá và Đã bán -->
+                <div class="d-flex align-items-center mb-3">
+
+                    <div class="me-3">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star "></i>
+                    </div>
+                    <div>
+                        <span class="border-start rounded-0 btn btn-link text-dark"
+                            style="text-decoration: none;">{{product.so_luong_da_ban}}
+                            Đã
+                            bán</span>
+                    </div>
+                </div>
+
+                <!-- Thêm thông tin chi tiết sản phẩm -->
+                <div class="mb-3">
+                    <p></p>
+                </div>
+
+                <!-- Thêm giá sản phẩm -->
+                <div class=" d-flex bg-light p-1 align-items-center">
+                    <p class=" fst-italic text-decoration-line-through text-secondary mt-2 mb-2">
+                        {{product.gia_niem_yet}}</p>
+                    <p class="ms-4 fs-2 mt-1 mb-1 fw-semibold  ">
+                        {{product.gia_ban}}
+                    </p>
+                    <!-- Thêm thông tin giảm giá hoặc ưu đãi nếu có -->
+                    <p class="bg-danger text-light ms-2 fw-semibold mt-2 mb-2" >{{product.uu_dai}}%</p>
+                </div>
+
+                <!-- Khu vực thông tin vận chuyển -->
+                <div class=" mt-2 mb-3 d-flex">
+                    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Vận chuyển </p>
+                    <div class="d-flex flex-column mt-1" style="margin-left: 2%;">
+                        <div class="d-flex"><img src="/img/logo_freeship.png" class="ratio "
+                                style="margin: 0px 0px 0px ; max-width: 24px; max-height: 20px;">
+                            <p style="font-size: small; margin-left: 10px;">Miễn phí vận chuyển</p>
+                        </div>
+                        <p style="font-size: small; font-style: italic;">Miễn phí vận chuyển cho đơn hàng trên
+                            99.000 vnđ</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column" style="margin-left: 13%;">
+                    <div class="d-flex">
+                        <i class="fas fa-truck"></i>
+                        <p style="font-size: small; margin-left: 10px;">Vận chuyển tới </p>
+                        <p style="font-size: small; margin-left: 2%;"><i class="fas fa-map-marker-alt"
+                                style="margin: 2px;"></i> Chọn vị trí </p>
+                    </div>
+                    <div class="d-flex" style="margin-left: 30px;">
+                        <p style="font-size: small; ">Phí vận chuyển </p>
+                        <p style="font-size: small; margin-left: 3%; font-style: italic;">0vnđ - 22.000vnđ <i
+                                class="fas fa-caret-down" style="margin: 2px;"></i></p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <div class="flex-column">Số lượng</div>
+                    <div class="flex-column " style="margin-left: 5%;">
+                        <div class="col-5 d-flex " style="max-width: fit-content; ">
+                            <div class="input-group d-flex">
+                                <button class="PlusT btn btn-outline-secondary btn-sm " type="button" id="decrease-btn"
+                                    title="Giảm số lượng sản phẩm">-</button>
+                                <input type="text" class="ValS form-control text-center fa-xs" value="1"
+                                    id="quantity-input" aria-label="Quantity" aria-describedby="quantity-input"><button
+                                    class="PlushC btn btn-outline-secondary btn-sm " type="button" id="increase-btn"
+                                    title="Tăng số lượng sản phẩm">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Button-->
+                <div class="d-flex mb-1 mt-2 mw-50 me-3">
+                    <a href="#!Xac-nhan-don-hang" class="btn btn-icon btn-success w-50 btn-sm" style="margin-left: 1%;">
+                        <i class="fa-solid fa-cart-shopping fa-lg"></i> Mua ngay
+                    </a>
+                    <a class="btn btn-icon btn-warning w-50 btn-sm" style="margin-left: 5%;" ng-click="addToCart()">
+                        <i class="fas fa-cart-plus fa-lg"></i> Thêm vào giỏ hàng
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Đây là chi tiết về sản phẩm-->
+    <div class=" border rounded-1 mw-100" style="margin-top: 2%; ">
+        <h4 class="p-3 bg-light">CHI TIẾT SẢN PHẨM </h4>
+        <div class="d-flex  align-items-center  " style="margin-left: 2%;">
+            <div>
+                <div class="d-flex flex-column" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                    <div class="mb-2">Danh mục</div>
+                    <div class="mb-2">Chất liệu</div>
+                    <div>Bảo hành</div>
+                </div>
+            </div>
+
+            <div class="m-5">
+                <div class="d-flex flex-column " style="font-size: small;">
+                    <div class="mb-2">{{product.danh_muc}}</div>
+                    <div class="mb-2">{{product.chat_lieu}}</div>
+                    <div>{{product.bao_hanh}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <h4 class="p-3 bg-light">MÔ TẢ SẢN PHẨM </h4>
+            <div class="" style="margin-left: 2%;">
+                <p class="d-block ">Phiên bản tỉ lệ: 1/144
+                    <br>
+                    <i class="fas fa-circle"></i> Chiều cao: 15 cm
+                    <hr>
+                    <i class="fas fa-circle"></i> Thành Phần:
+                    <br>
+                    - Các runner và phụ kiện liên quan
+                    <br>
+                    - Sách hướng dẫn các bước lắp ghép
+                    <hr>
+                    <i class="fas fa-circle"></i> Đặc điểm sản phẩm:
+                    <br>
+                    - Được sản xuất bằng loại nhựa ABS, màu sắc bóng đẹp, bắt mắt, an toàn tuyệt đối cho trẻ em
+                    <br>
+                    - Những thiết kế sản phẩm vô cùng thông minh, sáng tạo, tinh tế
+                    <br>
+                    - Kết nối các mảnh nhựa tạo thành mô hình Gundam vô cùng đẹp mắt
+                    <hr>
+                    Thông số kỹ thuật:
+                    <br>
+
+                    <i class="fas fa-circle"></i> Xuất xứ thương hiệu: Trung Quốc
+                    <br>
+                    <i class="fas fa-circle"></i> Độ tuổi: trên 6 tuổi
+                    <br>
+                    <i class="fas fa-circle"></i> Chất liệu: Nhựa cao cấp ABS, an toàn cho trẻ
+                    <br>
+                    <i class="fas fa-circle"></i> Sản xuất tại: Trung Quốc
+                    <br>
+                    <i class="fas fa-circle"></i> Năm sản xuất: 2021
+                    <br>
+                    - Sản phẩm bảo vệ môi trường, không độc hại
+                    <br>
+                    - Quy chuẩn hợp quy đồ chơi trẻ em theo quy chuẩn Việt Nam QCVN 3:2019/BKHCN
+                    <br>
+                    Tuân thủ tiêu chuẩn an toàn của liên minh châu Âu, tiêu chuẩn ASTM D4236 của Mỹ
+                    <hr>
+                    <i class="fas fa-exclamation-triangle" style="color: #FFD43B;"></i> Cảnh báo an toàn:
+                    <br>
+                    - Sản phẩm dùng cho trẻ em trên 3 tuổi
+                    <br>
+                    - Sản phẩm có nhiều chi tiết nhỏ, không dùng cho trẻ dưới 3 tuổi để tránh nuốt phải.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class=" border rounded-1 mw-100" style="margin-top: 2%; ">
+        <h4 class="p-2">ĐÁNH GIÁ SẢN PHẨM </h4>
+        <!--Phần hiển thị số lượt đánh giá-->
+        <div class="border rounded" style="margin: 2%;">
+            <!-- Đánh giá và nhận xét -->
+            <div>
+
+            </div>
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+</div>

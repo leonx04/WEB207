@@ -1,0 +1,204 @@
+<div>
+    <div class="row d-flex  mt-1 border rounded-1 p-1 bg-secondary-subtle">
+        <h3 class="text-center">Xác nhận đơn hàng</h3>
+    </div>
+    <!--Cột kèm nút chọn tất cả-->
+    <div class="row d-flex  mt-3 border rounded-1 p-3 ">
+        <div class="col-6 d-flex align-items-center">
+            <div class="col-2" style="max-width: 90px;">Sản Phẩm</div>
+
+            <div class="col-2 " style="max-width: 90px; margin: auto;">Mô tả</div>
+
+        </div>
+        <div class="col-6 d-flex justify-content-between">
+            <div class="col-2">Đơn Giá</div>
+            <div class="col-2">Số Lượng</div>
+            <div class="col-2">Thành Tiền</div>
+        </div>
+    </div>
+
+    <!--Sản phẩm -->
+    <div class="row mt-2 border rounded-1 p-3">
+        <div class=" row d-flex   justify-content-between"
+            style="border-bottom: 1px dashed rgba(0,0,0,.09); padding: 0px 0px 10px;">
+            <div class="col-6 d-flex align-items-center">
+                <div class="col-2">
+                    <div class="ratio ratio-1x1">
+                        <div class="bg-light">
+                            <img src="/img/144LandlineMecha.jpg" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 " style="max-width: max-content; margin: auto;">
+                    <a href="/Gundam_Landline_Mecha.html" class="text-dark-emphasis  ratio"
+                        style="text-decoration: none;" title="Gundam Landline Mecha Size 1/144">Gundam Landline
+                        Mecha
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-6 d-flex justify-content-between align-items-center">
+                <div class="col-2 text-center " style="max-width: max-content;">
+                    <div class=" align-items-md-center">
+                        <p class="text-sm-center">299.000 vnđ</p>
+                    </div>
+                </div>
+
+                <div class="col-2 d-flex " style="max-width: fit-content;">
+                    <p>1</p>
+                </div>
+
+
+                <div class="thanhtienCol col-2" style="max-width: fit-content;" id="thanhtienColum">299.000 vnđ
+                </div>
+            </div>
+        </div>
+
+        <div class=" row d-flex   justify-content-between mt-2"
+            style="border-bottom: 1px dashed rgba(0,0,0,.09); padding: 0px 0px 10px;">
+            <div class="col-6 d-flex align-items-center">
+                <div class="col-2">
+                    <div class="ratio ratio-1x1">
+                        <div class="bg-light">
+                            <img src="/img/Gundam_HG_Unicorn_1_144.jpg" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 " style="max-width: max-content; margin: auto;">
+                    <a href="/Gundam_HG_Unicorn.html" class="text-dark-emphasis  ratio" style="text-decoration: none;"
+                        title="Gundam Landline Mecha Size 1/144">Gundam HG Unicorn
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-6 d-flex justify-content-between align-items-center">
+                <div class="col-2 text-center " style="max-width: max-content;">
+                    <div class=" align-items-md-center">
+                        <p class="text-sm-center">189.000 vnđ</p>
+                    </div>
+                </div>
+
+                <div class="col-2 d-flex " style="max-width: fit-content;">
+                    <p>2</p>
+                </div>
+
+
+                <div class="thanhtienCol col-2" style="max-width: fit-content;" id="thanhtienColum">378.000 vnđ
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12 mt-2 d-flex justify-content-between ms-1">
+            <div>
+                <span class="col-6 justify-content-center ">
+                    <i class="fas fa-ticket-alt"></i>
+                    Voucher
+                </span>
+            </div>
+
+            <div class=" btn btn-sm"><span class="btn-link col-6 justify-content-center "
+                    style="text-decoration: none;"> <i class="far fa-plus-square"></i> Chọn Voucher
+                </span></div>
+
+        </div>
+    </div>
+
+    <!--Khu vực form -->
+    <div class="row mt-2 border rounded-1 p-3">
+        <div class="col-7 mw-100">
+            <!--Điền thông tin cần thiết-->
+            <div class="container border rounded-1 p-3 ">
+                <div class="row justify-content-start">
+                    <div class="col-md-6" style="width: 100%;">
+                        <form>
+                            <div class="form-group">
+                                <label for="fullName">Mã đơn hàng:</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Mã đơn hàng"
+                                    disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="fullName">Tên người nhận hàng:</label>
+                                <input type="text" class="form-control" id="fullName"
+                                    placeholder="Nhập tên người nhận" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại:</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Địa chỉ:</label>
+                                <textarea class="form-control" id="address" rows="3"
+                                    placeholder="Nhập địa chỉ nhận hàng" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fullName">Đơn vị vận chuyển</label>
+                                <select class="form-control" id="paymentMethod" name="paymentMethod">
+                                    <option value="internetBanking">VNExpress </option>
+                                    <option value="creditCard">GHTK </option>
+                                    <option value="creditCard">GHN </option>
+                                    <option value="eWallet"> Viettel Post</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="idd">Ngày đặt hàng</label>
+                                <input class="form-control" type="date" id="idd" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-5 mw-100">
+            <!--Điền thông tin cần thiết-->
+            <div class="container border rounded-1 p-3 ">
+                <div class="row justify-content-start">
+                    <div class="col-md-6" style="width: 100%;">
+                        <form>
+                            <div class="form-group">
+                                <label for="fullName">Hình thức thanh toán</label>
+                                <select class="form-control" id="paymentMethod" name="paymentMethod">
+                                    <option value="Paymentondelivery">Thanh toán khi nhận hàng</option>
+                                    <option value="creditCard">Thẻ Tín Dụng (Credit) </option>
+                                    <option value="VisaCard">Thẻ Ngân Hàng (Visa) </option>
+                                    <option value="eWallet">Ví Điện Tử</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Tổng số sản phẩm</label>
+                                <input type="tel" class="form-control bg-body-tertiary" placeholder="3" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Tổng tiền sản phẩm</label>
+                                <input type="tel" class="form-control bg-body-tertiary" placeholder="687.000 vnđ"
+                                    disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Phí vận chuyển</label>
+                                <input class="form-control bg-body-tertiary" rows="3" placeholder="40.000 vnđ" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Tổng thanh toán</label>
+                                <input class="form-control bg-body-tertiary" tyle="font-size: large;" rows="3"
+                                    placeholder="727.000 vnđ" disabled>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d-grid mt-2" style="border-top: 1px dashed rgba(0,0,0,.09); ">
+            <button type="button" class="mt-2 btn btn-danger btn-block">ĐẶT HÀNG</button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,41 @@
+<h3>Đây là trang chi tiết sản phẩm</h3>
+
+<form>
+    <!--Khu vực id-->
+    <div>
+        <span class="form-label">Id: </span>
+        <input ng-model="product.id" class="form-control" type="text" disabled>
+    </div>
+
+    <div class="mt-3">
+        <span class="form-label">Tên</span>
+        <input ng-model="product.name" class="form-control" type="text" disabled>
+    </div>
+
+    <div class="mt-3">
+        <span class="form-label">Gía</span>
+        <input ng-model="product.price" class="form-control" type="text" disabled>
+    </div>
+
+    <div class="mt-3">
+        <span class="form-label">Danh mục</span>
+        <select ng-model="product.category" class="form-control" disabled>
+            <option value="">-Lựa chọn-</option>
+            <option value="Bình hoa TC">Bình hoa TC</option>
+            <option value="Đồ bếp TC">Đồ bếp TC</option>
+            <option value="Đồ nhà tắm TC">Đồ nhà tắm TC</option>
+        </select>
+    </div>
+
+    <div class="mt-3">
+        <a href="#!list-product" class="btn btn-secondary">Quay lại</a>
+        <a href="#!edit-product/{{product.id}}" class="btn btn-warning">Chỉnh sửa</a>
+    </div>
+
+
+    <!--<div class="mt-3 alert alert-danger" ng-hide="formStatus">
+        {{formMessage}}
+    </div>-->
+
+
+</form>

@@ -1,0 +1,16 @@
+{
+    "hoctap": [
+        {
+            "id": "001",
+            "hoTen": "Nam",
+            "namSinh": "2004",
+            "chuyenNghanh": "(Phát Triển Phầm Mềm"
+        },
+        {
+            "id": "02",
+            "hoTen": "dŨNG",
+            "namSinh": "2003",
+            "chuyenNghanh": "Phát Triển Phầm Mềm"
+        }
+    ]
+}

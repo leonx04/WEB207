@@ -1,0 +1,89 @@
+<div class="border rounded p-3 bg-secondary-subtle">
+    <h3 class="mt-3 text-center ">Danh sách đơn hàng</h3>
+    <!-- Tab danh sách -->
+    <div class="table-responsive " id="NoiDungTabDanhSach">
+
+        <table class="table table-hover table-bordered text-center ">
+            <thead>
+                <tr>
+                    <th>Mã đơn hàng</th>
+                    <th>Tên Khách Hàng</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Ngày đặt hàng</th>
+                    <th>Đơn vị vận chuyển</th>
+                    <th>Hình thức thanh toán</th>
+                    <th>Voucher</th>
+                    <th>Phí vận chuyển</th>
+                    <th>Số lượng </th>
+                    <th>Tổng tiền sản phẩm</th>
+                    <th>Tổng tiền đơn hàng</th>
+                    <th>Trạng thái</th>
+                    <th>Ngày cập nhật</th>
+                    <th>Tương tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in donhang">
+                    <td>{{item.id}}</td>
+                    <td>{{item.ten_khach_hang}}</td>
+                    <td>{{item.sdt_khach_hang}}</td>
+                    <td>{{item.dia_chi_ghichu}}</td>
+                    <td>{{item.ngay_dat_hang}}</td>
+                    <td>{{item.don_vi_van_chuyen}}</td>
+                    <td>{{item.thanh_toan}}</td>
+                    <td>{{item.voucher}}</td>
+                    <td>{{item.phi_van_chuyen}}</td>
+                    <td>{{item.tong_so_luong}} </td>
+                    <td>{{item.Tong_tien_san_pham}}</td>
+                    <td>{{item.Tong_thanh_toan}}</td>
+                    <td><!-- Sử dụng ng-class để thiết lập class động dựa trên giá trị của trạng thái -->
+                        <span
+                            ng-class="{'badge bg-success  rounded-pill': item.trang_thai === 'Hoàn Thành',
+                             'badge bg-primary  rounded-pill': item.trang_thai === 'Đang giao hàng',
+                             'badge bg-secondary  rounded-pill': item.trang_thai === 'Đang Xác Nhận',
+                            'badge bg-info text-black rounded-pill': item.trang_thai === 'Đang Xử Lý',
+                        'badge bg-danger rounded-pill': item.trang_thai === 'Đã Hủy',
+                    'badge bg-warning text-black rounded-pill': item.trang_thai === 'Chờ Thanh Toán'}">{{item.trang_thai}}
+                        </span>
+                    </td>
+                    <td>{{item.ngay_cap_nhat}}</td>
+                    <td class="text-nowrap" style="width: 1px;">
+                        <!--Nút để hiển thị bảng đơn hàng chi tiết có id_dh ở bảng don-hang trùng với ma_don_hang trong bảng don_hang_chi_tiet-->
+                        <a href="" class="btn btn-info" ng-click="onClickDetailDH(item.id)">Xem thêm</a>
+                        <a href="#!donhang-detail/{{item.id}}" class="btn btn-primary">Xem </a>
+                        <a href="#!donhang-update/{{item.id}}" class="btn btn-warning">Sửa</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--Chỉ khi nhấn xem thêm ở  bảng danh sách đơn hàng thì mới hiện dữ liệu đơn hàng chi tiết-->
+    <div class="border rounded p-3 mt-2 bg-secondary">
+        <h3 class="text-center text-light">Sản phẩm</h3>
+        <div class="table-responsive ">
+            <table class="table table-hover table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Mã đơn hàng</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Mô tả</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng mua</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in donhangchitiet">
+                        <td>{{item.ma_don_hang}}</td>
+                        <td>{{item.mo_ta}}</td>
+                        <td>{{item.don_gia}}</td>
+                        <td>{{item.don_gia}}</td>
+                        <td>{{item.so_luong_mua}}</td>
+                        <td>{{item.thanh_tien}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

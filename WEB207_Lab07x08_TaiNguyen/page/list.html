@@ -1,0 +1,28 @@
+<div>
+    <a href="#!tao-moi-sinh-vien" class="mt-1 btn btn-success justify-content-end">Tạo mới</a>
+    
+    <table class="table table-bordered mt-2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Họ tên</th>
+                <th>Năm sinh</th>
+                <th>Chuyên Ngành</th>
+                <th>Tương tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in ListStudent">
+                <td>{{item.id}}</td>
+                <td>{{item.hoTen}}</td>
+                <td>{{item.namSinh}}</td>
+                <td>{{item.chuyenNghanh}}</td>
+                <td>
+                    <a href="#!chi-tiet-sinh-vien/{{item.id}}" class="btn btn-primary ">Xem </a>
+                    <a href="" class="btn btn-danger ">Xóa</a>
+                </td>
+            </tr>
+    
+        </tbody>
+    </table>
+</div>

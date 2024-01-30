@@ -1,39 +1,38 @@
-var app = angular.module("myApp", []);
+console.log("Log để kiểm tra: Đã nhúng file QLSanPham thành công");
 
-        app.controller("nameCtrl", function ($scope, $http) {
-            $scope.danhsach = [];
-            $scope.newProduct = {};
+//5.1 Khai báo controller QLDanhMuc
+app.controller("QLSanPham", function ($scope, $http, $routeParams) {
+  console.log("Log để kiểm tra: Khai báo QLSanPham thành công");
 
-            // Hàm này được thêm vào để chuyển dữ liệu từ form sang định dạng JSON
-            $scope.convertToJSON = function () {
-                $scope.newProduct.ngay_tao = new Date(
-                    $scope.newProduct.ngay_tao
-                ).toLocaleString();
-                $scope.newProduct.ngay_cap_nhat = new Date(
-                    $scope.newProduct.ngay_cap_nhat
-                ).toLocaleString();
-                return angular.toJson($scope.newProduct);
-            };
+  console.log("Log để in thử giá trị params từ url", $routeParams);
 
-            $http({
-                method: "GET",
-                url: "http://localhost:3000/san-pham",
-            }).then(function (response) {
-                $scope.danhsach = response.data;
-            });
+  // 1. Khai báo biến cần thiết
+  $scope.QLSanPham = [];
 
-            $scope.addProduct = function () {
-                // Gửi dữ liệu lên máy chủ 
-                $http({
-                    method: "POST",
-                    url: "http://localhost:3000/san-pham",
-                    data: $scope.convertToJSON(), // Sử dụng hàm convertToJSON để chuyển đổi dữ liệu
-                }).then(function (response) {
-                    console.log(response.data);
-                    // Thực hiện các xử lý khác sau khi gửi thành công
-                    // Có thể làm refresh danh sách sản phẩm hoặc thực hiện các bước khác
-                    $scope.danhsach.push(response.data); // Thêm sản phẩm mới vào danh sách hiện tại
-                    $scope.newProduct = {}; // Đặt lại form sau khi thêm thành công
-                });
-            };
-        });
+
+  // 2. Call api lấy danh sách sản phẩm
+  $http({
+    method: 'GET',
+    url: 'http://localhost:3000/san-pham'
+  }).then(function (response) {
+    // Gán giá trị sau khi call api thành công
+    $scope.QLSanPham = response.data
+    console.log("Log thử giá trị biến QLSanPham", $scope.QLSanPham);
+
+  })
+  
+  $scope.product = {
+    id: '',
+    ten: '',
+    hinh_anh: '',
+    danh_muc: '',
+    gia_niem_yet: '',
+    gia_ban: '',
+    uu_dai: '',
+    ngay_tao: '',
+    ngay_cap_nhat: '',
+    trang_thai: ''
+  }
+
+  
+});

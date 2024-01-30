@@ -1,0 +1,61 @@
+<h3>Đây là trang danh sách</h3>
+
+<div>
+    <a href="#!create-product" class="btn btn-success">Tạo mới</a>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gía </th>
+            <th>Danh mục</th>
+            <th>Tương tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item  in listProduct">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.category}}</td>
+            <td>
+                <a href="#!detail-product/{{item.id}}" class="btn btn-primary">Xem</a>
+                <a href="#!edit-product/{{item.id}}" class="btn btn-warning">Sửa</a>
+                <a href="" class=" btn btn-danger" >Xóa</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal-{{item.id}}">
+                    Open modal
+                </button>
+            </td>
+
+            <!-- The Modal -->
+            <div class="modal" id="deleteConfirmationModal-{{item.id}}">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Xác nhận xoá</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            Bạn có chắc chắn muốn xoá {{item.name}} ?
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" ng-click="onlClickDeleted(item.id)"> Xác nhận
+                                xoá</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </tr>
+    </tbody>
+</table>

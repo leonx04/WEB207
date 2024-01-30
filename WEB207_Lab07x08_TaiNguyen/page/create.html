@@ -1,0 +1,36 @@
+<div>
+    <div class="mb-3 mt-3">
+        <label for="">ID:</label>
+        <input type="text" class="form-control" placeholder="Vui lòng nhập ID" ng-model="Studen.id">
+    </div>
+
+    <div class="mb-3 mt-3">
+        <label for="">Họ tên:</label>
+        <input type="text" class="form-control" placeholder="Vui lòng nhập họ tên" ng-model="Studen.hoTen">
+    </div>
+
+    <div class="mb-3 mt-3">
+        <label for="">Năm sinh:</label>
+        <input type="text" class="form-control" placeholder="Vui lòng nhập năm sinh" ng-model="Studen.namSinh">
+    </div>
+
+    <div class="mb-3 mt-3">
+        <label class="form-label">Chuyên Nghành:</label>
+        <select ng-model="Studen.chuyenNghanh" class="form-control">
+            <option value="">-Lựa chọn-</option>
+            <option value="Phát Triển Phầm Mềm">Phát Triển Phầm Mềm</option>
+            <option value="Ứng Dụng Phầm Mềm">Ứng Dụng Phầm Mềm</option>
+            <option value="Lập Trình Website">Lập Trình Website</option>
+        </select>
+    </div>
+
+    <div class="mt-3 alert alert-danger" ng-hide="formStatus">
+        {{formMessage}}
+    </div>
+
+    <div>
+        <a href="#!danh-sach-sinh-vien" class="btn btn-secondary">Quay lại</a>
+        <button type="submit" class="btn btn-success " ng-click="OnClickCreate()">Tạo mới</button>
+    </div>
+
+</div>

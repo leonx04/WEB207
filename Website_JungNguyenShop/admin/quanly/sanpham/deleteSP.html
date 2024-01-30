@@ -1,0 +1,92 @@
+<div class="border rounded p-3 bg-secondary-subtle">
+    <h3 class="mt-3 text-center text-dark">Danh sách để xóa sản phẩm </h3>
+    <!-- Tab xóa-->
+    <div class="table-responsive border rounded p-3 bg-secondary-subtle" id="NoiDungTabDelete">
+        <!-- Nội dung danh sách -->
+    
+        <table class="table table-hover table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Mã sản phẩm</th>
+                    <th>Hình ảnh</th>
+                    <th>Danh mục</th>
+                    <th>Giá gốc(VND)</th>
+                    <th>Giá bán(VND)</th>
+                    <th>Ưu đãi(%)</th>
+                    <th>Chất liệu</th>
+                    <th>Số lượng</th>
+                    <th>Số lượng đã bán</th>
+                    <th>Bảo hành</th>
+                    <th>Ngày tạo</th>
+                    <th>Ngày cập nhật</th>
+                    <th>Trạng thái</th>
+                    <th>Tương tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in deleteSP">
+                    <td>{{item.ten}}</td>
+                    <td>{{item.id}}</td>
+                    <td>
+                        <div class="ratio ratio-1x1">
+                            <div class="bg-light">
+                                <img ng-src="{{item.hinh_anh}}" class="mh-100 mw-100" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>{{item.danh_muc}}</td>
+                    <td>{{item.gia_niem_yet}}</td>
+                    <td>{{item.gia_ban}}</td>
+                    <td>{{item.uu_dai}}%</td>
+                    <td>{{item.chat_lieu}}</td>
+                    <td>{{item.so_luong}}</td>
+                    <td>{{item.so_luong_da_ban}}</td>
+                    <td>{{item.bao_hanh}}</td>
+                    <td>{{item.ngay_tao}}</td>
+                    <td>{{item.ngay_cap_nhat}}</td>
+                    <td>
+                        <!-- Sử dụng ng-class để thiết lập class động dựa trên giá trị của trạng thái -->
+                        <span
+                            ng-class="{'badge bg-success rounded-pill': item.trang_thai === 'Đang bán', 'badge bg-danger rounded-pill': item.trang_thai === 'Đã ngừng bán'}">{{item.trang_thai}}</span>
+                    </td>
+                    <td class="text-nowrap" style="width: 1px;">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#myModal-{{item.id}}">
+                            Xóa
+                        </button>
+    
+                        <!-- The Modal -->
+                        <div class="modal" id="myModal-{{item.id}}">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+    
+                                    <!-- Modal Header -->
+                                    <div class="modal-header ">
+                                        <h4 class="modal-title ">Xác nhận</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+    
+                                    <!-- Modal body -->
+                                    <div class="modal-body  ">
+                                        Bạn có chắc chắn muốn xóa sản phẩm có tên là: <p class="text-danger">
+                                            {{item.ten}}</p>
+                                    </div>
+    
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Hủy</button>
+    
+                                        <button class="btn btn-danger" ng-click="onClickDeleteSP(item.id)">Xác nhận
+                                            xóa</button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

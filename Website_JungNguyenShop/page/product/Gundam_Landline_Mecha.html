@@ -63,7 +63,7 @@
                         </button>
                     </div>
                 </div>
-            
+
                 <div class="btn-group ml-2" role="group">
                     <a href="/TimKiem.html" class="btn btn-outline-secondary">
                         <i class="fas fa-filter"></i>
@@ -87,13 +87,7 @@
                             </a>
                         </li>
                     </ul>
-                    <!--
-                                        Sử dụng kỹ thuật CSS để di chuyển bộ đếm đến vị trí mong muốn
-                                        Sử dụng position-relative và position-absoloute
-                                    -->
                 </div>
-
-
                 <!--Button đăng nhập và đăng ký-->
                 <ul class="navbar-nav">
                     <!--Đăng nhập-->
@@ -197,25 +191,13 @@
                         <div class="flex-column " style="margin-left: 5%;">
                             <div class="col-5 d-flex " style="max-width: fit-content; ">
                                 <div class="input-group d-flex">
-                                    <!-- Lớp "input-group" của Bootstrap được sử dụng để nhóm các thành phần input và button lại với nhau.
-                                                                                     Lớp "d-flex" ở đây cũng giúp sử dụng flexbox. -->
-
                                     <button class="PlusT btn btn-outline-secondary btn-sm " type="button"
                                         id="decrease-btn" title="Giảm số lượng sản phẩm">-</button>
-                                    <!-- Đây là một nút giảm giá trị, sử dụng lớp "btn btn-outline-secondary btn-sm" của Bootstrap. 
-                                                                                     Nút này có id "decrease-btn" để có thể được thao tác với JavaScript. -->
-
                                     <input type="text" class="ValS form-control text-center fa-xs" value="1"
-                                        id="quantity-input" aria-label="Quantity" aria-describedby="quantity-input">
-                                    <!-- Đây là một input để hiển thị và nhập giá trị số lượng.
-                                                                                     Lớp "form-control" là một lớp của Bootstrap để tạo input có chiều cao phù hợp.
-                                                                                     "text-center" là lớp để căn giữa nội dung của input. 
-                                                                                     Giá trị mặc định là 1, và nó có id "quantity-input" để có thể được thao tác bằng JavaScript. -->
-
-                                    <button class="PlushC btn btn-outline-secondary btn-sm " type="button"
-                                        id="increase-btn" title="Tăng số lượng sản phẩm">+</button>
-                                    <!-- Đây là một nút tăng giá trị, cũng sử dụng lớp "btn btn-outline-secondary btn-sm" của Bootstrap. 
-                                                                                     Nút này có id "increase-btn" để có thể được thao tác với JavaScript. -->
+                                        id="quantity-input" aria-label="Quantity"
+                                        aria-describedby="quantity-input"><button
+                                        class="PlushC btn btn-outline-secondary btn-sm " type="button" id="increase-btn"
+                                        title="Tăng số lượng sản phẩm">+</button>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +205,8 @@
 
                     <!--Button-->
                     <div class="d-flex mb-1 mt-5 mw-50" style="max-width: 360px; ">
-                        <a href="#" class="btn btn-icon btn-success w-50 btn-sm" style="margin-left: 1%;">
+                        <a href="/XacNhanDonHang.html" class="btn btn-icon btn-success w-50 btn-sm"
+                            style="margin-left: 1%;">
                             <i class="fa-solid fa-cart-shopping fa-lg"></i> Mua ngay
                         </a>
                         <a href="/GioHang.html" class="btn btn-icon btn-warning w-50 btn-sm" style="margin-left: 5%;">
@@ -292,7 +275,7 @@
                         - Sản phẩm bảo vệ môi trường, không độc hại
                         <br>
                         - Quy chuẩn hợp quy đồ chơi trẻ em theo quy chuẩn Việt Nam QCVN 3:2019/BKHCN
-                        br
+                        <br>
                         Tuân thủ tiêu chuẩn an toàn của liên minh châu Âu, tiêu chuẩn ASTM D4236 của Mỹ
                         <hr>
                         <i class="fas fa-exclamation-triangle" style="color: #FFD43B;"></i> Cảnh báo an toàn:
@@ -348,56 +331,5 @@
 
 
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var quantityInput = document.getElementById('quantity-input');
-        var decreaseBtn = document.getElementById('decrease-btn');
-        var increaseBtn = document.getElementById('increase-btn');
-
-        // Sự kiện khi người dùng thay đổi giá trị input
-        quantityInput.addEventListener('input', function () {
-            updateQuantityOnInput();
-        });
-
-        // Sự kiện khi nhấn nút giảm
-        decreaseBtn.addEventListener('click', function () {
-            updateQuantity(-1);
-        });
-
-        // Sự kiện khi nhấn nút tăng
-        increaseBtn.addEventListener('click', function () {
-            updateQuantity(1);
-        });
-
-        function updateQuantity(change) {
-            var currentQuantity = parseInt(quantityInput.value);
-
-            // Kiểm tra xem giá trị mới có lớn hơn 0 không
-            var newQuantity = Math.max(currentQuantity + change, 0);
-
-            quantityInput.value = newQuantity;
-        }
-
-        function updateQuantityOnInput() {
-            // Nếu giá trị input rỗng, đặt giá trị mặc định là 0
-            if (quantityInput.value === '') {
-                quantityInput.value = 0;
-            } else {
-                // Nếu giá trị là "0" và người dùng nhập số khác, thay thế giá trị bằng số mới
-                var currentValue = parseInt(quantityInput.value);
-                if (currentValue === 0) {
-                    quantityInput.value = '';
-                }
-            }
-
-            // Chỉ nhận dữ liệu là số
-            var inputValue = parseFloat(quantityInput.value);
-            if (isNaN(inputValue)) {
-                quantityInput.value = 0;
-            }
-        }
-    });
-
-</script>
 
 </html>

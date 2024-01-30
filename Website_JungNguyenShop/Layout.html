@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shop mô hình Jung Nguyen</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <!-- Nhúng Bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <!-- Nhúng AngularJS -->
+    <!-- Lưu ý: Nhúng file angular-route.js sau file angular.js -->
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+
+
+    <script>
+        var app = angular.module('myApp', ['ngRoute']);
+
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {  // Đường dẫn mặc định
+                    templateUrl: "page/TrangChu.html",
+                    controller: "HomePageController"
+                })
+                .when("/Home-page", {
+                    templateUrl: "page/TrangChu.html",
+                    controller: "HomePageController"
+                })
+                .when("/Gio-hang", {
+                    templateUrl: "page/GioHang.html",
+                    controller: "GioHangController"
+                })
+                .when("/Tim-Kiem", {
+                    templateUrl: "page/Search.html",
+                    controller: 'SearchProductController'
+                })
+                .when("/Xac-nhan-don-hang", {
+                    templateUrl: "page/ConfirmDH.html",
+                    controller: "ConfirmDH"
+                })
+                .when("/Detail-product/:id", {
+                    templateUrl: "page/Detail_product.html",
+                    controller: "Detailproduct"
+                })
+        })
+
+        app.controller('LayoutCtrl', function ($scope, $rootScope) {
+            // Khai báo biến $rootScope để sử dụng được ở toàn bộ các controller
+            $rootScope.cartNumber = 0;
+
+            $scope.addToCart = function () {
+                // Tăng giá trị của giỏ hàng
+                $rootScope.cartNumber += 1;
+            };
+        })
+    </script>
+    <script src="page/TrangChu.js"></script>
+    <script src="page/Detail_product.js"></script>
+    <script src="page/Search.js"></script>
+    <script src="page/GioHang.js"></script>
+    <script src="page/ConfirmDH.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="LayoutCtrl">
+    <!--Khu vực header-->
+    <nav class="navbar navbar-expand-md bg-light shadow-sm">
+
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <!--Logo-->
+                <a href="#!Home-page" class="me-1  bg-light ">
+                    <img src="img/logo-removebg-preview.png" style="height: 50px;">
+                </a>
+
+
+                <!-- Menu có sử dụng dropdown -->
+                <ul class="navbar-nav">
+                    <!--Danh mục sản phẩm-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="submenuDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Danh mục sản phẩm
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="submenuDropdown">
+                            <li><a class="dropdown-item" href="#">SD (Super Deformed)</a></li>
+                            <li><a class="dropdown-item" href="#">HG (High Grade) </a></li>
+                            <li><a class="dropdown-item" href="#">RG (Real Grade)</a></li>
+                            <li><a class="dropdown-item" href="#">MG (Master Grade)</a></li>
+                            <li><a class="dropdown-item" href="#">RE/100 (Real Entry Grade)</a></li>
+                            <li><a class="dropdown-item" href="#">PG (Perfect Grade)</a></li>
+                            <li><a class="dropdown-item" href="#">FM (Full Mechanics)</a></li>
+                            <li><a class="dropdown-item" href="#">PB (Premium Bandai)</a></li>
+                            <li><a class="dropdown-item" href="#">NG (No Grade)</a></li>
+                            <li><a class="dropdown-item" href="#">PG Unleashed (Perfect Grade Unleashed)</a></li>
+                            <li><a class="dropdown-item" href="#">MSM (Mega Size Model)</a></li>
+                            <li><a class="dropdown-item" href="#">RAH (Real Action Heroes)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-md-flex ">
+                <div class="input-group">
+                    <input type="text" class=" form-control" placeholder="Bạn đang cần tìm gì ?">
+                    <div class="input-group-append">
+                        <button class=" btn btn-primary rounded-end-1  rounded-0" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="btn-group ms-1" >
+                    <a href="#!Tim-Kiem" class="btn  border-0">
+                        <i class="fas fa-filter "></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="d-flex justify-content-end">
+                <!--Gio hàng-->
+                <div>
+                    <ul class="navbar-nav mt-1">
+                        <li class="nav-item">
+                            <a href="#!Gio-hang">
+                                <button class="btn border-0 text-dark position-relative">
+                                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                    <span class="badge  bg-danger rounded-pill position-absolute ">{{cartNumber}}</span>
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!--Button đăng nhập và đăng ký-->
+                <ul class="navbar-nav mt-1 ms-5 " >
+                    <!--Đăng nhập-->
+                    <li class="nav-item">
+                        <a href="/page/Login.html" class="btn btn-light rounded-1 " >
+                            Đăng nhập
+                        </a>
+                    </li>
+                    <!--Đăng ký-->
+                    <li class="nav-item">
+                        <a href="/page/SignUp.html" class="btn btn-outline-success rounded-1">
+                            Đăng ký
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+        </div>
+
+    </nav>
+
+
+
+    <div class="container mt-4" style="min-height: calc(100vh - 131px);  " ng-view>
+
+    </div>
+
+    <!--Khu vực footer-->
+    <div class="container-fluid bg-dark text-light   border-top mt-2 ">
+        <div class="container " style="font-family: 'Times New Roman', Times, serif;">
+            <div class="row mt-2">
+                <div class="col-6 ">
+                    <h5>Liên hệ</h5>
+                    <p>Địa chỉ: 123 Đường Đõ, Quận Nam Từ Liêm, Thành phố Hà Nội</p>
+                    <p>Số điện thoại: 0123 456 789</p>
+                    <p>Email: dungnx291@gmail.com</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Về chúng tôi</h5>
+                    <div>
+                        <img src="img/BoCongThuong.png" style="width: 250px;">
+                    </div>
+
+                    <p>MST : 000020030400</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

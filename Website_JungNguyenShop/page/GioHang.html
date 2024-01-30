@@ -1,0 +1,81 @@
+<div>
+    <div class="row d-flex  mt-5 border rounded-1 p-1 bg-secondary-subtle">
+        <h3 class="text-center">Giỏ hàng</h3>
+    </div>
+    <!--Cột kèm nút chọn tất cả-->
+    <div class="row d-flex  mt-5 border rounded-1 p-3 justify-content-between ">
+        <div class="col-6 d-flex align-items-center">
+            <div class="col-2 d-flex align-items-center ml-auto">
+                <input class="SelectAllSP" type="checkbox" name="" title="Chọn tất cả sản phẩm"
+                    onclick="changeCheckboxTitle(this)">
+            </div>
+            <div class="col-2" style="max-width: 90px;">Sản Phẩm</div>
+
+            <div class="col-2 " style="max-width: 90px; margin: auto;">Mô tả</div>
+        </div>
+        <div class="col-6 d-flex justify-content-between">
+            <div class="col-2">Đơn Giá</div>
+            <div class="col-2">Số Lượng</div>
+            <div class="col-2">Thành Tiền</div>
+            <div class="col-2">Thao Tác</div>
+        </div>
+    </div>
+    <!--Sản phẩm -->
+    <div class="product row d-flex  mt-5 border rounded-1 p-3 justify-content-between">
+        <div class="col-6 d-flex align-items-center">
+            <div class="col-2 d-flex align-items-center ml-auto">
+                <input class="SelectSP" type="checkbox" name="" title="Chọn mua sản phẩm"
+                    onclick="changeCheckboxSP(this)">
+            </div>
+
+            <div class="col-2">
+                <div class="ratio ratio-1x1">
+                    <div class="bg-light">
+                        <img src="img/144LandlineMecha.jpg" class="mw-100 mh-100 rounded">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 " style="max-width: max-content; margin: auto;">
+                <a href="page/product/Gundam_Landline_Mecha.html" class="text-dark-emphasis  ratio"
+                    style="text-decoration: none;" title="Gundam Landline Mecha Size 1/144">Gundam Landline
+                    Mecha
+                    Size 1/144</a>
+            </div>
+
+        </div>
+
+        <div class="col-6 d-flex justify-content-between align-items-center">
+            <div class="col-2 text-center " style="max-width: max-content;">
+                <div class=" align-items-md-center">
+                    <p class=" text-warning text-sm-center">299.000 vnđ</p>
+                    <span class=" text-decoration-line-through text-sm">399.000 vnđ</span>
+                </div>
+            </div>
+
+            <div class="col-2 d-flex " style="max-width: fit-content;">
+                <div class="input-group d-flex">
+                    <button class="PlusT btn btn-outline-secondary btn-sm " type="button" id="decrease-btn"
+                        title="Giảm số lượng sản phẩm">-</button>
+                    <input type="label" class="ValS form-control text-center fa-xs" value="1" id="quantity-input"
+                        aria-label="Quantity" aria-describedby="quantity-input">
+                    <button class="PlushC btn btn-outline-secondary btn-sm " type="button" id="increase-btn"
+                        title="Tăng số lượng sản phẩm">+</button>
+
+                </div>
+            </div>
+
+
+            <div class="thanhtienCol col-2" style="max-width: fit-content;" id="thanhtienColum">299.000 vnđ
+            </div>
+            <div class="col-2">
+                <a class="btn btn-danger" id="deleted_sp">
+                    Xóa
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
