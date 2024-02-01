@@ -1,17 +1,16 @@
 <div>
-    <div class="row d-flex  mt-5 border rounded-1 p-1 bg-secondary-subtle">
+    <div class="row d-flex mt-5 border rounded-1 p-1 bg-secondary-subtle">
         <h3 class="text-center">Giỏ hàng</h3>
     </div>
     <!--Cột kèm nút chọn tất cả-->
-    <div class="row d-flex  mt-5 border rounded-1 p-3 justify-content-between ">
+    <div class="row d-flex mt-5 border rounded-1 p-3 justify-content-between ">
         <div class="col-6 d-flex align-items-center">
             <div class="col-2 d-flex align-items-center ml-auto">
                 <input class="SelectAllSP" type="checkbox" name="" title="Chọn tất cả sản phẩm"
-                    onclick="changeCheckboxTitle(this)">
+                    ng-click="selectAllProducts()">
             </div>
-            <div class="col-2" style="max-width: 90px;">Sản Phẩm</div>
-
-            <div class="col-2 " style="max-width: 90px; margin: auto;">Mô tả</div>
+            <div class="col-2 mw-100">Sản Phẩm</div>
+            <div class="col-2 m-auto">Mô tả</div>
         </div>
         <div class="col-6 d-flex justify-content-between">
             <div class="col-2">Đơn Giá</div>
@@ -20,62 +19,70 @@
             <div class="col-2">Thao Tác</div>
         </div>
     </div>
+
+    <div class="row mt-2 ">
+        <div class=" container d-flex align-items-center justify-content-end">
+            <span ng-click="deleteGioHangChecked()" class="text-danger d-flex btn btn-danger text-light">Xoá sản
+                phẩm</span>
+        </div>
+    </div>
     <!--Sản phẩm -->
-    <div class="product row d-flex  mt-5 border rounded-1 p-3 justify-content-between">
+    <div class="product row d-flex mt-3 border rounded-1 p-3 justify-content-between" ng-repeat="item in giohang">
         <div class="col-6 d-flex align-items-center">
             <div class="col-2 d-flex align-items-center ml-auto">
-                <input class="SelectSP" type="checkbox" name="" title="Chọn mua sản phẩm"
-                    onclick="changeCheckboxSP(this)">
+                <input class="SelectSP" type="checkbox" name="" title="Chọn mua sản phẩm" ng-model="item.selected"
+                    ng-change="updateSelectedProducts()">
             </div>
-
-            <div class="col-2">
+            <div class="col-2 mw-100">
                 <div class="ratio ratio-1x1">
                     <div class="bg-light">
-                        <img src="img/144LandlineMecha.jpg" class="mw-100 mh-100 rounded">
+                        <img ng-src="{{item.hinh_anh}}" class="mw-100 mh-100 rounded">
                     </div>
                 </div>
             </div>
-
-            <div class="col-6 " style="max-width: max-content; margin: auto;">
-                <a href="page/product/Gundam_Landline_Mecha.html" class="text-dark-emphasis  ratio"
-                    style="text-decoration: none;" title="Gundam Landline Mecha Size 1/144">Gundam Landline
-                    Mecha
-                    Size 1/144</a>
+            <div class="col-6 text-center m-auto ">
+                <a href="#!Detail-product/{{item.id_sp}}" class="text-dark-emphasis" style="text-decoration: none;"
+                    title="{{item.ten}}">{{item.ten}}</a>
             </div>
-
         </div>
-
-        <div class="col-6 d-flex justify-content-between align-items-center">
-            <div class="col-2 text-center " style="max-width: max-content;">
-                <div class=" align-items-md-center">
-                    <p class=" text-warning text-sm-center">299.000 vnđ</p>
-                    <span class=" text-decoration-line-through text-sm">399.000 vnđ</span>
-                </div>
+        <div class="col-6 d-flex justify-content-between align-items-center m-auto">
+            <div class="col-2 ">
+                <span class="text-warning text-sm-center">{{item.gia_ban | number}}</span>
+                <span class="text-decoration-line-through text-sm-center">{{item.gia_niem_yet | number}}</span>
             </div>
 
-            <div class="col-2 d-flex " style="max-width: fit-content;">
-                <div class="input-group d-flex">
-                    <button class="PlusT btn btn-outline-secondary btn-sm " type="button" id="decrease-btn"
-                        title="Giảm số lượng sản phẩm">-</button>
-                    <input type="label" class="ValS form-control text-center fa-xs" value="1" id="quantity-input"
-                        aria-label="Quantity" aria-describedby="quantity-input">
-                    <button class="PlushC btn btn-outline-secondary btn-sm " type="button" id="increase-btn"
-                        title="Tăng số lượng sản phẩm">+</button>
-
-                </div>
+            <div class="col-2">
+                <span>{{item.quantity}}</span>
             </div>
 
-
-            <div class="thanhtienCol col-2" style="max-width: fit-content;" id="thanhtienColum">299.000 vnđ
+            <div class="col-2" id="thanhtienColum">
+                {{item.thanh_tien | number}}
             </div>
             <div class="col-2">
-                <a class="btn btn-danger" id="deleted_sp">
+                <a class="btn btn-danger" id="deleted_sp" ng-click="deleteProduct(item.id)">
                     Xóa
                 </a>
             </div>
         </div>
     </div>
 
+    <div class="row fixed-bottom  " style="backdrop-filter: blur(5px) ;background-color: rgba(0, 0, 0, 0.5) ">
+        <div class="col-12 container d-flex align-items-center justify-content-end">
+            <div class=" row d-flex container-fluid ">
+                <div class="col-8  justify-content-start ">
+                    <p class="text-light" style="font-size: x-large; font-family: 'Times New Roman', Times, serif;">Tổng
+                        thanh toán:</p>
 
-
+                    <label class="fw-semibold ms-3"
+                        style="font-family:  sans-serif; color: #fff67b; font-size: x-large;">{{tongTien | number}}
+                        VND</label>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center ">
+                    <a class="btn btn-success" ng-click="muaNgay($event)" href="#!Xac-nhan-don-hang">
+                        Mua hàng
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

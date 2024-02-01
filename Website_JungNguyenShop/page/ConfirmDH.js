@@ -3,7 +3,7 @@ console.log("Tạo thành công file ConfirmDH");
 app.controller('ConfirmDH', function ($scope, $http) {
     console.log("Nhúng file ConfirmDH thành công");
 
-    $scope.danhsach = [];
+    $scope.donhang = [];
 
     $http({
         method: 'GET',

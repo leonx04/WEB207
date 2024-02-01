@@ -13,7 +13,7 @@ app.controller("updateSP", function ($scope, $http, $routeParams) {
         gia_ban: '',
         uu_dai: '',
         ngay_tao: '',
-        ngay_cap_nhat: '',
+        ngay_cap_nhat: '',// Được tạo tự động
         so_luong: '',
         so_luong_da_ban: '0',
         trang_thai: '',
@@ -45,23 +45,27 @@ app.controller("updateSP", function ($scope, $http, $routeParams) {
     })
 
     // Khai báo hàm định dạng giá tiền
-    function formatCurrency(input) {
-        // Sử dụng NumberFormat để thực hiện định dạng
-        const formatter = new Intl.NumberFormat('vi-VN', {
-            style: 'currency',
-            currency: 'VND'
-        });
+    // function formatCurrency(input) {
+    // Sử dụng NumberFormat để thực hiện định dạng
+    //    const formatter = new Intl.NumberFormat('vi-VN', {
+    //       style: 'currency',
+    //      currency: 'VND'
+    //  });
 
-        // Định dạng giá và trả về
-        return formatter.format(input);
-    }
+    // Định dạng giá và trả về
+    //return formatter.format(input);
+    // }
 
     $scope.OnClickUpdateSP = function () {
+        // Lấy thời gian hiện tại dựa trên múi giờ của trình duyệt
+        var browserTime = new Date().toLocaleString();
+
+        // Gán giá trị browserTime vào thuộc tính ngay_cap_nhat
+        $scope.sanpham.ngay_cap_nhat = browserTime;
         console.log("Log thử giá trị được thêm ", $scope.sanpham);
 
         $scope.formMessage = '',
             $scope.formStatus = true;
-
 
         if ($scope.sanpham.ten === '') {
             $scope.formStatus = false;
@@ -83,14 +87,24 @@ app.controller("updateSP", function ($scope, $http, $routeParams) {
             $scope.formMessage = 'Vui lòng chọn danh mục cho sản phẩm';
             return;
         }
-        if ($scope.sanpham.gia_niem_yet === '') {
+        if (Number($scope.sanpham.gia_niem_yet) < 1000) {
             $scope.formStatus = false;
-            $scope.formMessage = 'Vui lòng nhập giá gốc sản phẩm';
+            $scope.formMessage = 'Vui lòng nhập giá niêm yết sản phẩm phải lớn hơn 1000';
             return;
         }
         if ($scope.sanpham.gia_ban === '') {
             $scope.formStatus = false;
             $scope.formMessage = 'Vui lòng nhập giá bán sản phẩm';
+            return;
+        }
+        if (isNaN($scope.sanpham.gia_ban)) {
+            $scope.formStatus = false;
+            $scope.formMessage = 'Vui lòng nhập giá bán sản phẩm là số';
+            return;
+        }
+        if (Number($scope.sanpham.gia_ban) < 1000) {
+            $scope.formStatus = false;
+            $scope.formMessage = 'Vui lòng nhập giá bán sản phẩm phải lớn hơn 1000';
             return;
         }
         if ($scope.sanpham.uu_dai === '') {
@@ -144,10 +158,10 @@ app.controller("updateSP", function ($scope, $http, $routeParams) {
             return;
         }
 
-
         // Định dạng giá niêm yết và giá bán trước khi gửi đi
-        $scope.sanpham.gia_niem_yet = formatCurrency($scope.sanpham.gia_niem_yet);
-        $scope.sanpham.gia_ban = formatCurrency($scope.sanpham.gia_ban);
+        //$scope.sanpham.gia_niem_yet = formatCurrency($scope.sanpham.gia_niem_yet);
+        //$scope.sanpham.gia_ban = formatCurrency($scope.sanpham.gia_ban);
+
 
         $http({
             method: 'PUT',
@@ -155,7 +169,6 @@ app.controller("updateSP", function ($scope, $http, $routeParams) {
             data: $scope.sanpham
         }).then(function (response) {
             alert('Đã cập nhật thành công');
-            console.log("Thông tin hợp lệ");
         })
     }
 })

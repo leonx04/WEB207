@@ -28,6 +28,12 @@ app.controller("updateDM", function ($scope, $http, $routeParams) {
     })
 
     $scope.OnClickUpdateDN = function () {
+        // Lấy thời gian hiện tại dựa trên múi giờ của trình duyệt
+        var browserTime = new Date().toLocaleString();
+
+        // Gán giá trị browserTime vào thuộc tính ngay_cap_nhat
+        $scope.danhmuc.ngay_cap_nhat = browserTime;
+
         console.log("Log thử giá trị biến $scope.danhmuc", $scope.danhmuc);
 
         $scope.formMessage = '';

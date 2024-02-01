@@ -90,7 +90,7 @@
                     url: 'http://localhost:3000/account',
                     data: $scope.account
                 }).then(function (response) {
-                    alert('Đã tạo mới thành công');
+                    alert('Đã đăng ký thành công tài khoản mới, vui lòng chuyển đến trang đăng nhập');
                 })
             }
         })
@@ -173,6 +173,13 @@
                         <button type="submit" class="btn btn-success rounded-1" ng-click="onClickDK()">
                             Đăng ký
                         </button>
+                    </li>
+                </ul>
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                        <div class="mt-2">
+                            <a class="btn bg-info text-decoration-none" href="/Layout.html"> Quay lại</a>
+                        </div>
                     </li>
                 </ul>
                 <br>

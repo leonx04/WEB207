@@ -44,13 +44,13 @@
           templateUrl: "admin/quanly/danhmuc/delete.html",
           controller: "deleteDM",
         })
-        
+
         //SAN PHAM
         .when("/san-pham", {
           templateUrl: "admin/quanly/QuanLySanPham.html",
           controller: "QLSanPham",
         })
-         .when("/sanpham-danhsach", {
+        .when("/sanpham-danhsach", {
           templateUrl: "admin/quanly/sanpham/danhsachSP.html",
           controller: "danhsachSP",
         })
@@ -75,7 +75,7 @@
           templateUrl: "admin/quanly/QuanLyDonHang.html",
           controller: "QLDonHang",
         })
-         .when("/donhang-danhsach", {
+        .when("/donhang-danhsach", {
           templateUrl: "admin/quanly/donhang/danhsachDH.html",
           controller: "danhsachDH",
         })
@@ -109,6 +109,8 @@
   <script src="admin/quanly/donhang/danhsachDH.js"></script>
   <script src="admin/quanly/donhang/detailDH.js"></script>
   <script src="admin/quanly/donhang/updateDH.js"></script>
+  <!--Thư viện dùng để lấy thời gian-->
+  <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 
 </head>
 
@@ -120,10 +122,10 @@
       </a>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link disabled text-dark" href="#">Xin chào Jung Nguyen</a>
+          <a class="nav-link disabled text-dark" href="#">Xin chào admin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Đăng xuất</a>
+          <a class="nav-link" href="page/Login.html">Đăng xuất</a>
         </li>
       </ul>
     </div>
@@ -133,7 +135,8 @@
     <div class="bg-light p-2" style="width: 210px; min-height: calc(100vh - 56px)">
       <ul class="nav flex-column nav-pills">
         <li class="nav-item card  mt-1 mb-1">
-          <a class="nav-link card-header  btn btn-info text-start text-dark  dropdown-toggle" data-bs-toggle="collapse"   href="#menu-danhmuc">Quản
+          <a class="nav-link card-header  btn btn-info text-start text-dark  dropdown-toggle" data-bs-toggle="collapse"
+            href="#menu-danhmuc">Quản
             lý danh
             mục</a>
           <div class="collapse " id="menu-danhmuc">
@@ -147,35 +150,38 @@
           </div>
         </li>
         <li class="nav-item card mt-1 mb-1">
-          <a class="nav-link card-header btn btn-info text-start text-dark dropdown-toggle" data-bs-toggle="collapse" href="#menu-sanphham">Quản
+          <a class="nav-link card-header btn btn-info text-start text-dark dropdown-toggle" data-bs-toggle="collapse"
+            href="#menu-sanphham">Quản
             lý sản phẩm</a>
           <div class="collapse" id="menu-sanphham">
             <ul class="list-unstyled mt-2">
               <li><a class="nav-link btn btn-info text-start text-dark" href="#!sanpham-danhsach">Danh sách</a></li>
               <li><a class="nav-link btn btn-info text-start text-dark" href="#!sanpham-detail/SP01">Chi tiết</a></li>
               <li><a class="nav-link btn btn-info text-start text-dark" href="#!sanpham-create">Thêm </a></li>
-              <li><a class="nav-link btn btn-info text-start text-dark" href="#!sanpham-update/SP01">Cập nhật </a></li>
+              <li><a class="nav-link btn btn-info text-start text-dark" href="#!sanpham-update/SP01">Cập nhật </a>
+              </li>
               <li><a class="nav-link btn btn-info text-start text-dark" href="#!sanpham-delete">Xóa </a></li>
             </ul>
           </div>
         </li>
-      <li class="nav-item card mt-1 mb-1">
-        <a class="nav-link card-header btn btn-info text-start text-dark dropdown-toggle" data-bs-toggle="collapse"
-          href="#menu-donhang">Quản
-          lý đơn hàng</a>
-        <div class="collapse" id="menu-donhang">
-          <ul class="list-unstyled mt-2">
-            <li><a class="nav-link btn btn-info text-start text-dark" href="#!donhang-danhsach">Danh sách</a></li>
-            <li><a class="nav-link btn btn-info text-start text-dark" href="#!donhang-detail/DH01">Chi tiết</a></li>
-            <li><a class="nav-link btn btn-info text-start text-dark" href="#!donhang-update/DH01">Cập nhật </a></li>
-          </ul>
-        </div>
-      </li>
+        <li class="nav-item card mt-1 mb-1">
+          <a class="nav-link card-header btn btn-info text-start text-dark dropdown-toggle" data-bs-toggle="collapse"
+            href="#menu-donhang">Quản
+            lý đơn hàng</a>
+          <div class="collapse" id="menu-donhang">
+            <ul class="list-unstyled mt-2">
+              <li><a class="nav-link btn btn-info text-start text-dark" href="#!donhang-danhsach">Danh sách</a></li>
+              <li><a class="nav-link btn btn-info text-start text-dark" href="#!donhang-detail/DH01">Chi tiết</a></li>
+              <li><a class="nav-link btn btn-info text-start text-dark" href="#!donhang-update/DH01">Cập nhật </a>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
 
-    <div class="m-3 "  style="width: calc(100% - 250px)" ng-view>
-    <!--Nội dung -->
+    <div class="m-3 " style="width: calc(100% - 250px)" ng-view>
+      <!--Nội dung -->
     </div>
   </div>
 

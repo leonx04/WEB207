@@ -17,6 +17,13 @@ app.controller("createDM", function ($scope, $http, $routeParams) {
     $scope.formStatus = true;
 
     $scope.OnClickCreateDN = function () {
+        // Lấy thời gian hiện tại dựa trên múi giờ của trình duyệt
+        var browserTime = new Date().toLocaleString();
+
+        // Gán giá trị browserTime vào thuộc tính ngay_tao
+        $scope.danhmuc.ngay_tao = browserTime;
+
+
         console.log("Log thử giá trị biến ", $scope.danhmuc);
 
         $scope.formMessage = '';

@@ -47,15 +47,33 @@
                 })
         });
 
-        app.controller('LayoutCtrl', function ($scope, $rootScope, $http) {
-
-            // Khai báo biến $rootScope để sử dụng được ở toàn bộ các controller
+        app.controller('LayoutAcCtrl', function ($scope, $rootScope, $http) {
             $rootScope.cartNumber = 0;
 
-            $scope.addToCart = function () {
-                // Tăng giá trị của giỏ hàng
-                $rootScope.cartNumber += 1;
+            // Hàm để cập nhật cartNumber
+            $rootScope.updateCartNumber = function () {
+                $http({
+                    method: 'GET',
+                    url: 'http://localhost:3000/gio-hang'
+                }).then(function (response) {
+                    // Tính tổng số bản ghi từ danh sách sản phẩm trong giỏ hàng
+                    let totalRecords = response.data.length;
+
+                    // Cập nhật cartNumber
+                    $rootScope.cartNumber = totalRecords;
+
+                });
             };
+
+            $scope.addToCart = function (productId) {
+                // Thực hiện thêm sản phẩm vào giỏ hàng
+
+                // Cập nhật lại cartNumber sau khi thêm sản phẩm vào giỏ hàng
+                $rootScope.updateCartNumber();
+            };
+
+            // Gọi hàm cập nhật cartNumber khi trang layout được load
+            $rootScope.updateCartNumber();
         });
 
     </script>
@@ -67,9 +85,9 @@
 
 </head>
 
-<body ng-app="myApp" ng-controller="LayoutCtrl">
+<body ng-app="myApp" ng-controller="LayoutAcCtrl">
     <!--Khu vực header-->
-    <nav class="navbar navbar-expand-md bg-light shadow-sm">
+    <nav class="navbar navbar-expand-md bg-light shadow-sm" >
 
         <div class="container-fluid">
             <div class="d-flex align-items-center">
@@ -100,7 +118,7 @@
             <div class="d-flex justify-content-end">
                 <!--Gio hàng-->
                 <div>
-                    <ul class="navbar-nav mt-1">
+                    <ul class="navbar-nav mt-2 mb-1">
                         <li class="nav-item">
                             <a href="#!Gio-hang">
                                 <button class="btn border-0 text-dark position-relative">
@@ -113,22 +131,18 @@
 
                 </div>
 
-
                 <!--Button đăng nhập và đăng ký-->
                 <ul class="navbar-nav mt-1 ms-5 ">
-                    <!--Đăng nhập-->
-                    <li class="nav-item">
-                        <a href="/page/Login.html" class="btn btn-light rounded-1 ">
-                            Đăng nhập
-                        </a>
-                    </li>
-                    <!--Đăng ký-->
-                    <li class="nav-item">
-                        <a href="/page/SignUp.html" class="btn btn-outline-success rounded-1">
-                            Đăng ký
-                        </a>
-                    </li>
-
+                    <div class="dropdown">
+                        <button class="btn" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end " style="max-width: fit-content;">
+                            <li>
+                                <a class="dropdown-item rounded-1 btn btn-info bg-" href="page/Login.html">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
                 </ul>
             </div>
 
@@ -165,25 +179,6 @@
 
             </div>
 
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal" tabindex="-1" role="dialog" ng-show="showLoginModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Yêu cầu đăng nhập</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Bạn cần đăng nhập để tiếp tục.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <a href="/page/Login.html" class="btn btn-primary">Đăng nhập</a>
-                </div>
-            </div>
         </div>
     </div>
 

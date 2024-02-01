@@ -11,8 +11,8 @@ app.controller("createSP", function ($scope, $http, $routeParams) {
         gia_niem_yet: '',
         gia_ban: '',
         uu_dai: '',
-        ngay_tao: '',
-        ngay_cap_nhat: '',
+        ngay_tao: '', // Sẽ được gán giá trị tự động
+        ngay_cap_nhat: '', // Sẽ được bỏ trống 
         so_luong: '',
         so_luong_da_ban: '0',
         trang_thai: 'Đang bán',
@@ -20,19 +20,19 @@ app.controller("createSP", function ($scope, $http, $routeParams) {
         bao_hanh: ''
     }
 
-    
+
 
     // Khai báo hàm định dạng giá tiền
-    function formatCurrency(input) {
-        // Sử dụng NumberFormat để thực hiện định dạng
-        const formatter = new Intl.NumberFormat('vi-VN', {
-            style: 'currency',
-            currency: 'VND'
-        });
+    //function formatCurrency(input) {
+    // Sử dụng NumberFormat để thực hiện định dạng
+    //   const formatter = new Intl.NumberFormat('vi-VN', {
+    //       style: 'currency',
+    //      currency: 'VND'
+    //  });
 
-        // Định dạng giá và trả về
-        return formatter.format(input);
-    }
+    //  // Định dạng giá và trả về
+    // return formatter.format(input);
+    //}
 
     $http({
         method: 'GET',
@@ -44,13 +44,18 @@ app.controller("createSP", function ($scope, $http, $routeParams) {
         console.log('Log in thử giá trị của biến $scope.danhsach:', $scope.danhmuc);
     })
 
-
-
     $scope.formMessage = '',
         $scope.formStatus = true;
 
-    
+
     $scope.createSP = function () {
+        // Lấy thời gian hiện tại dựa trên múi giờ của trình duyệt
+        var browserTime = new Date().toLocaleString();
+
+        // Gán giá trị browserTime vào thuộc tính ngay_tao
+        $scope.sanpham.ngay_tao = browserTime;
+
+
         console.log("Log thử giá trị được thêm ", $scope.sanpham);
 
         $scope.formMessage = '',
@@ -141,11 +146,11 @@ app.controller("createSP", function ($scope, $http, $routeParams) {
             $scope.formMessage = 'Vui lòng nhập thông tin bảo hành sản phẩm';
             return;
         }
-        if ($scope.sanpham.ngay_tao === '') {
-            $scope.formStatus = false;
-            $scope.formMessage = 'Vui lòng chọn ngày tạo sản phẩm';
-            return;
-        }
+        //if ($scope.sanpham.ngay_tao === '') {
+        //    $scope.formStatus = false;
+        //    $scope.formMessage = 'Vui lòng chọn ngày tạo sản phẩm';
+        //    return;
+        //}
         //if ($scope.sanpham.ngay_cap_nhat === '') {
         //$scope.formStatus = false;
         //$scope.formMessage = 'Vui lòng chọn ngày cập nhật sản phẩm';
@@ -158,16 +163,15 @@ app.controller("createSP", function ($scope, $http, $routeParams) {
         //}
 
         // Định dạng giá niêm yết và giá bán trước khi gửi đi
-        $scope.sanpham.gia_niem_yet = formatCurrency($scope.sanpham.gia_niem_yet);
-        $scope.sanpham.gia_ban = formatCurrency($scope.sanpham.gia_ban);
-        
+        //$scope.sanpham.gia_niem_yet = formatCurrency($scope.sanpham.gia_niem_yet);
+        //$scope.sanpham.gia_ban = formatCurrency($scope.sanpham.gia_ban);
+        console.log("Log thử giá trị sau khi được format ", $scope.sanpham);
         $http({
             method: 'POST',
             url: 'http://localhost:3000/san-pham',
             data: $scope.sanpham
         }).then(function (response) {
             alert('Đã tạo mới thành công');
-            console.log("Thông tin hợp lệ");
         })
     }
 

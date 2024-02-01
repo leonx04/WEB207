@@ -23,8 +23,7 @@ app.controller('SearchProductController', function ($scope, $http, $routeParams)
     })
 
     $scope.onClickDM = function (id) {
-        console.log('Danh sach được chọn :' + id);
-
+        console.log('Danh sach được chọn :' + id);
         $http({
             method: 'GET',
             url: 'http://localhost:3000/san-pham',
@@ -37,6 +36,7 @@ app.controller('SearchProductController', function ($scope, $http, $routeParams)
             $scope.danhsachSP = response.data;
         });
     }
+
 
     // Hàm xử lý sự kiện sắp xếp từ cao đến thấp
     $scope.sortByPriceDesc = function () {

@@ -4,89 +4,89 @@
       "id": "SD",
       "ten": "SD (Super Deformed)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "2024-01-27T12:40:00.000Z",
-      "ngay_cap_nhat": "2024-01-28T12:40:00.000Z",
-      "trang_thai": "Đang bán"
+      "ngay_tao": "05:00:00 30/1/2024",
+      "ngay_cap_nhat": "14:07:35 1/2/2024",
+      "trang_thai": "Đã ngừng bán"
     },
     {
       "id": "HG",
       "ten": "HG (High Grade)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "14/01/2024",
+      "ngay_tao": "05:01:00 30/1/2024",
+      "ngay_cap_nhat": "05:27:28 31/1/2024",
       "trang_thai": "Đang bán"
     },
     {
       "id": "RG",
       "ten": "RG (Real Grade)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "14/01/2024",
+      "ngay_tao": "05:02:00 30/1/2024",
+      "ngay_cap_nhat": "05:27:35 31/1/2024",
       "trang_thai": "Đang bán"
     },
     {
       "id": "MG",
       "ten": "MG (Master Grade)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "14/01/2024",
+      "ngay_tao": "05:03:00 30/1/2024",
+      "ngay_cap_nhat": "05:27:45 31/1/2024",
       "trang_thai": "Đang bán"
     },
     {
       "id": "RE",
       "ten": "RE/100 (Real Entry Grade)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "14/01/2024",
+      "ngay_tao": "05:04:00 30/1/2024",
+      "ngay_cap_nhat": "05:27:51 31/1/2024",
       "trang_thai": "Đang bán"
     },
     {
       "id": "PG",
       "ten": "PG (Perfect Grade)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "14/01/2024",
+      "ngay_tao": "05:05:00 30/1/2024",
+      "ngay_cap_nhat": "05:28:13 31/1/2024",
       "trang_thai": "Đang bán"
     },
     {
       "id": "FM",
       "ten": "FM (Full Mechanics)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "14/01/2024",
+      "ngay_tao": "05:06:00 30/1/2024",
+      "ngay_cap_nhat": "05:30:17 31/1/2024",
       "trang_thai": "Đang bán"
     },
     {
       "id": "NG",
       "ten": "NG (No Grade)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "14/01/2024",
+      "ngay_tao": "05:07:00 30/1/2024",
+      "ngay_cap_nhat": "05:30:10 31/1/2024",
       "trang_thai": "Đang bán"
     },
     {
-      "id": "PG Unleashed ",
+      "id": "PGU",
       "ten": "PG Unleashed (Perfect Grade Unleashed)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "14/01/2024",
+      "ngay_tao": "05:08:00 30/1/2024",
+      "ngay_cap_nhat": "05:30:03 31/1/2024",
       "trang_thai": "Đang bán"
     },
     {
       "id": "MSM",
       "ten": "MSM (Mega Size Model)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "14/01/2024",
+      "ngay_tao": "05:09:00 30/1/2024",
+      "ngay_cap_nhat": "05:28:07 31/1/2024",
       "trang_thai": "Đang bán"
     },
     {
       "id": "RAH",
       "ten": "RAH (Real Action Heroes)",
       "mo_ta": "Tỉ lệ từ 1:300 đến 1:600",
-      "ngay_tao": "13/01/2024",
-      "ngay_cap_nhat": "2024-01-27T17:00:00.000Z",
-      "trang_thai": "Đang bán"
+      "ngay_tao": "05:10:00 30/1/2024",
+      "ngay_cap_nhat": "23:06:48 31/1/2024",
+      "trang_thai": "Đã ngừng bán"
     }
   ],
   "san-pham": [
@@ -95,11 +95,11 @@
       "ten": "Gundam Landline Mecha",
       "hinh_anh": "img/144LandlineMecha.jpg",
       "danh_muc": "HG",
-      "gia_niem_yet": "400.000 ₫",
-      "gia_ban": "336.000 ₫",
+      "gia_niem_yet": "440000",
+      "gia_ban": "369600",
       "uu_dai": "16",
-      "ngay_tao": "2024-01-28T14:53:00.000Z",
-      "ngay_cap_nhat": "2024-01-28T17:26:00.000Z",
+      "ngay_tao": "06:00:00 30/1/2024",
+      "ngay_cap_nhat": "03:43:25 1/2/2024",
       "so_luong": 50,
       "so_luong_da_ban": "10",
       "trang_thai": "Đang bán",
@@ -111,12 +111,12 @@
       "ten": "Gundam HG Unicorn",
       "hinh_anh": "img/Gundam_HG_Unicorn_1_144.jpg",
       "danh_muc": "RG",
-      "gia_niem_yet": "300.000 ₫",
-      "gia_ban": "267.000 ₫",
+      "gia_niem_yet": "300000",
+      "gia_ban": "267000",
       "uu_dai": "11",
-      "ngay_tao": "20:23:00 17/1/2024",
-      "ngay_cap_nhat": "2024-01-30T15:53:00.000Z",
-      "so_luong": 50,
+      "ngay_tao": "06:01:00 30/1/2024",
+      "ngay_cap_nhat": "06:30:21 1/2/2024",
+      "so_luong": "40",
       "so_luong_da_ban": "12",
       "trang_thai": "Đang bán",
       "chat_lieu": "Nhựa ABS",
@@ -127,12 +127,12 @@
       "ten": "Gundam Butterfly Blue",
       "hinh_anh": "img/Gumdam_buttefly_1_144.jpg",
       "danh_muc": "SD",
-      "gia_niem_yet": "360.000 ₫",
-      "gia_ban": "277.200 ₫",
+      "gia_niem_yet": "360000",
+      "gia_ban": "277200",
       "uu_dai": "23",
-      "ngay_tao": "20:23:00 17/1/2024",
-      "ngay_cap_nhat": "2024-01-29T00:35:00.000Z",
-      "so_luong": 50,
+      "ngay_tao": "06:02:00 30/1/2024",
+      "ngay_cap_nhat": "06:31:26 1/2/2024",
+      "so_luong": "30",
       "so_luong_da_ban": "11",
       "trang_thai": "Đang bán",
       "chat_lieu": "Nhựa ABS",
@@ -143,12 +143,12 @@
       "id": "SP04",
       "hinh_anh": "img/Norma_UNX_04S_Hunter_Kainar_A_Type_2.jpg",
       "danh_muc": "HG",
-      "gia_niem_yet": "400.000 ₫",
-      "gia_ban": "320.000 ₫",
+      "gia_niem_yet": "400000",
+      "gia_ban": "320000",
       "uu_dai": "20",
       "trang_thai": "Đang bán",
-      "ngay_tao": "20:23:00 17/1/2024",
-      "ngay_cap_nhat": "20:23:00 17/1/2024",
+      "ngay_tao": "06:03:00 30/1/2024",
+      "ngay_cap_nhat": "05:12:52 31/1/2024",
       "so_luong": 50,
       "so_luong_da_ban": "1",
       "chat_lieu": "Nhựa ABS",
@@ -159,11 +159,11 @@
       "ten": "Gundam Azure Dragon Legend of Star General",
       "hinh_anh": "img/Gundam Azure Dragon Legend of Star General .jpg",
       "danh_muc": "RE",
-      "gia_niem_yet": "500.000 ₫",
-      "gia_ban": "350.000 ₫",
+      "gia_niem_yet": "500000",
+      "gia_ban": "350000",
       "uu_dai": "30",
-      "ngay_tao": "2024-01-29T12:57:00.000Z",
-      "ngay_cap_nhat": "2024-01-30T15:54:00.000Z",
+      "ngay_tao": "06:04:00 30/1/2024",
+      "ngay_cap_nhat": "05:13:13 31/1/2024",
       "so_luong": "10",
       "so_luong_da_ban": "0",
       "trang_thai": "Đang bán",
@@ -175,16 +175,32 @@
       "ten": "Gundam bandai Unicorn White",
       "hinh_anh": "img/Gundam bandai Unicorn White .jpg",
       "danh_muc": "SD",
-      "gia_niem_yet": "350.000 ₫",
-      "gia_ban": "280 ₫",
+      "gia_niem_yet": "350000",
+      "gia_ban": "280000",
       "uu_dai": "20",
-      "ngay_tao": "2024-01-30T13:06:00.000Z",
-      "ngay_cap_nhat": "2024-01-30T20:09:00.000Z",
-      "so_luong": "1",
+      "ngay_tao": "06:05:00 30/1/2024",
+      "ngay_cap_nhat": "06:31:55 1/2/2024",
+      "so_luong": "11",
       "so_luong_da_ban": "0",
       "trang_thai": "Đang bán",
       "chat_lieu": "Kim loại",
       "bao_hanh": "Không có"
+    },
+    {
+      "id": "SP07",
+      "ten": "GUNDAM RED TWO KNIGHT",
+      "hinh_anh": "img/GUNDAM-RED-TWO-KNIGHT.jpg",
+      "danh_muc": "SD",
+      "gia_niem_yet": "290000",
+      "gia_ban": "234900",
+      "uu_dai": "19",
+      "ngay_tao": "06:31:05 31/1/2024",
+      "ngay_cap_nhat": "08:48:15 1/2/2024",
+      "so_luong": "10",
+      "so_luong_da_ban": "0",
+      "trang_thai": "Đã ngừng bán",
+      "chat_lieu": "Nhựa PPS",
+      "bao_hanh": "Đổi trả 7 ngày"
     }
   ],
   "account": [
@@ -213,7 +229,7 @@
       "username": "DUNGNX",
       "email": "dungnx291@gmail.com",
       "password": "aaa",
-      "position": "user",
+      "position": "admin",
       "id": 4
     },
     {
@@ -222,6 +238,25 @@
       "password": "123",
       "position": "user",
       "id": 5
+    },
+    {
+      "username": "HUYNX",
+      "email": "cugiaiaye@gmail.com",
+      "password": "1234",
+      "position": "user",
+      "id": 6
+    }
+  ],
+  "gio-hang": [
+    {
+      "id_sp": "SP06",
+      "hinh_anh": "img/Gundam bandai Unicorn White .jpg",
+      "ten": "Gundam bandai Unicorn White",
+      "gia_ban": "280000",
+      "gia_niem_yet": "350000",
+      "quantity": 3,
+      "thanh_tien": 840000,
+      "id": 1
     }
   ],
   "don-hang": [
@@ -232,14 +267,14 @@
       "dia_chi_ghichu": "Quận 1, TP HCM",
       "thanh_toan": "Thanh toán khi nhận hàng",
       "don_vi_van_chuyen": "VNExpress",
-      "ngay_dat_hang": "30/1/2024",
+      "ngay_dat_hang": "07:00:00 30/1/2024",
       "voucher": "0%",
-      "phi_van_chuyen": "40.000 vnđ",
+      "phi_van_chuyen": "40000",
       "tong_so_luong": 3,
-      "Tong_tien_san_pham": "687.000 vnđ",
-      "Tong_thanh_toan": "727.000 vnđ",
-      "trang_thai": "Đang Xử Lý",
-      "ngay_cap_nhat": "2024-01-30T07:11:00.000Z"
+      "Tong_tien_san_pham": "687000",
+      "Tong_thanh_toan": "727000",
+      "trang_thai": "Đang giao hàng",
+      "ngay_cap_nhat": "13:06:04 1/2/2024"
     },
     {
       "id": "DH02",
@@ -248,14 +283,14 @@
       "dia_chi_ghichu": "Quận 2, TP HCM",
       "thanh_toan": "Thanh toán khi nhận hàng",
       "don_vi_van_chuyen": "VNExpress",
-      "ngay_dat_hang": "30/1/2024",
+      "ngay_dat_hang": "08:00:00 30/1/2024",
       "voucher": "0%",
-      "phi_van_chuyen": "40.000 vnđ",
+      "phi_van_chuyen": "40000",
       "tong_so_luong": 3,
-      "Tong_tien_san_pham": "687.000 vnđ",
-      "Tong_thanh_toan": "727.000 vnđ",
-      "trang_thai": "Hoàn Thành",
-      "ngay_cap_nhat": "2024-01-29T15:33:00.000Z"
+      "Tong_tien_san_pham": "687000",
+      "Tong_thanh_toan": "727000",
+      "trang_thai": "Đã Hủy",
+      "ngay_cap_nhat": "12:15:55 1/2/2024"
     }
   ],
   "don_hang_chi_tiet": [
@@ -264,36 +299,36 @@
       "id_san_pham": "SP01",
       "ma_don_hang": "DH01",
       "mo_ta": "Gundam Landline Mecha",
-      "don_gia": "299.000 vnđ",
+      "don_gia": "299000",
       "so_luong_mua": "1",
-      "thanh_tien": "299.000 vnđ"
+      "thanh_tien": "299000"
     },
     {
       "id_dhct": "2",
       "id_san_pham": "SP02",
       "ma_don_hang": "DH01",
       "mo_ta": "Gundam HG Unicorn",
-      "don_gia": "189.000 vnđ",
+      "don_gia": "189000",
       "so_luong_mua": "2",
-      "thanh_tien": "378.000 vnđ"
+      "thanh_tien": "378000"
     },
     {
       "id_dhct": "3",
       "id_san_pham": "SP01",
       "ma_don_hang": "DH02",
       "mo_ta": "Gundam Landline Mecha",
-      "don_gia": "299.000 vnđ",
+      "don_gia": "299000",
       "so_luong_mua": "1",
-      "thanh_tien": "299.000 vnđ"
+      "thanh_tien": "299000"
     },
     {
       "id_dhct": "4",
       "id_san_pham": "SP02",
       "ma_don_hang": "DH02",
       "mo_ta": "Gundam HG Unicorn",
-      "don_gia": "189.000 vnđ",
+      "don_gia": "189000",
       "so_luong_mua": "2",
-      "thanh_tien": "378.000 vnđ"
+      "thanh_tien": "378000"
     }
   ]
 }

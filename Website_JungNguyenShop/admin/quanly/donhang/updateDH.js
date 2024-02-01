@@ -35,6 +35,11 @@ app.controller('updateDH', function ($scope, $http, $routeParams) {
     })
 
     $scope.OnClickUpdateDH = function () {
+        // Lấy thời gian hiện tại dựa trên múi giờ của trình duyệt
+        var browserTime = new Date().toLocaleString();
+
+        // Gán giá trị browserTime vào thuộc tính ngay_cap_nhat
+        $scope.donhang.ngay_cap_nhat = browserTime;
         console.log("Log thử giá trị được chọn :", $scope.donhang);
 
         $scope.formMessage = '';

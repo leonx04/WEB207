@@ -33,10 +33,10 @@
                     <td>{{item.don_vi_van_chuyen}}</td>
                     <td>{{item.thanh_toan}}</td>
                     <td>{{item.voucher}}</td>
-                    <td>{{item.phi_van_chuyen}}</td>
+                    <td>{{item.phi_van_chuyen| number}}</td>
                     <td>{{item.tong_so_luong}} </td>
-                    <td>{{item.Tong_tien_san_pham}}</td>
-                    <td>{{item.Tong_thanh_toan}}</td>
+                    <td>{{item.Tong_tien_san_pham| number}}</td>
+                    <td>{{item.Tong_thanh_toan| number}}</td>
                     <td><!-- Sử dụng ng-class để thiết lập class động dựa trên giá trị của trạng thái -->
                         <span
                             ng-class="{'badge bg-success  rounded-pill': item.trang_thai === 'Hoàn Thành',
@@ -66,7 +66,6 @@
                 <thead>
                     <tr>
                         <th>Mã đơn hàng</th>
-                        <th>Tên sản phẩm</th>
                         <th>Mô tả</th>
                         <th>Đơn giá</th>
                         <th>Số lượng mua</th>
@@ -77,10 +76,9 @@
                     <tr ng-repeat="item in donhangchitiet">
                         <td>{{item.ma_don_hang}}</td>
                         <td>{{item.mo_ta}}</td>
-                        <td>{{item.don_gia}}</td>
-                        <td>{{item.don_gia}}</td>
+                        <td>{{item.don_gia | number}}</td>
                         <td>{{item.so_luong_mua}}</td>
-                        <td>{{item.thanh_tien}}</td>
+                        <td>{{item.thanh_tien  | number}}</td>
                     </tr>
                 </tbody>
             </table>
