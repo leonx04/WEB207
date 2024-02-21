@@ -1,0 +1,39 @@
+<div >
+
+
+    <div >
+        <form>
+            <h3 class="text-center">THÊM ĐIỆN THOẠI</h3>
+            <div class="mt-3">
+                <span class="form-label">ID</span>
+                <input type="text" class="form-control" ng-model="phone.id">
+            </div>
+
+            <div class="mt-3">
+                <span class="form-label">Tên</span>
+                <input type="text" class="form-control" ng-model="phone.ten">
+            </div>
+
+            <div class="mt-3">
+                <span class="form-label">Hãng</span>
+                <select class="form-control" ng-model="phone.hang">
+                    <option value="">-Lựa chọn-</option>
+                    <option value="SamSung">SamSung</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Oppo">Oppo</option>
+                </select>
+            </div>
+
+            <div class="mt-3">
+                <span class="form-label">Gía</span>
+                <input type="text" class="form-control" ng-model="phone.gia">
+            </div>
+
+            <div class="mt-3 text-center">
+                <button class="btn btn-success " ng-click="onClickSubmit()">Thêm</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

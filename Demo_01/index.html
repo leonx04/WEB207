@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 1</title>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+    <script>
+        var app = angular.module('myApp', ['ngRoute']);
+
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when('/list-phone', {
+                    templateUrl: '/phone/list-phone.html',
+                    controller: 'ListPhoneCtrl'
+                })
+                .when('/detail/phone/:id', {
+                    templateUrl: "/phone/detail.html",
+                    controller: 'DetailCtrl'
+                })
+                .when('/add', {
+                    templateUrl: "/phone/add.html",
+                    controller: 'AddCtrl'
+                })
+                .when('/edit/phone/:id', {
+                    templateUrl: "/phone/edit.html",
+                    controller: 'EditCtrl'
+                })
+        })
+    </script>
+
+    <script src="phone/add.js"></script>
+    <script src="phone/detail.js"></script>
+    <script src="phone/edit.js"></script>
+    <script src="phone/list.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="#!list-phone">Danh sách</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!add">Thêm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sửa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#!/detail/phone/:1">Chi tiết</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="min-height: calc(100vh - 131px);" ng-view>
+
+    </div>
+</body>
+
+</html>
