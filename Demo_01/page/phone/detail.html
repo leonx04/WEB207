@@ -1,0 +1,35 @@
+<div class="mt-3 border border-1 rounded px-4 py-2">
+    <h3 class="text-center">Chi tiết sản phẩm</h3>
+    <form>
+        <div>
+            <span class="form-label">ID</span>
+            <input class="form-control" ng-model="phone.id" disabled >
+        </div>
+
+        <div class="mt-2">
+            <span class="form-label">Tên sản phẩm</span>
+            <input class="form-control" ng-model="phone.ten" disabled>
+        </div>
+
+        <div class="mt-3">
+            <span class="form-label">Hãng</span>
+            <select class="form-control" ng-model="phone.hang"disabled>
+                <option value="">Lựa chọn</option>
+                <option value="SAMSUNG">SAMSUNG</option>
+                <option value="OPPO">OPPO</option>
+                <option value="APPLE">APPLE</option>
+            </select>
+        </div>
+
+        <div class="mt-2">
+            <span class="form-label">Gía</span>
+            <input class="form-control" ng-model="phone.gia"disabled>
+        </div>
+
+        <div class="mt-4 text-center">
+            <a href="#!list-phone" class="btn btn-secondary ">Quay lại</a>
+            <a href="#!edit/phone/{{phone.id}}" class="btn btn-warning ">Sửa</a>
+        </div>
+
+    </form>
+</div>

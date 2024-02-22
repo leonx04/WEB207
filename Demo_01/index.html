@@ -4,40 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo 1</title>
+    <title>Document</title>
     <link rel="stylesheet" href="lib/bootstrap.css">
-    <script src="lib/bootstrap.js"></script>
     <script src="lib/angular.js"></script>
+    <script src="lib/bootstrap.js"></script>
     <script src="lib/angular-route.js"></script>
     <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+
     <script>
-        var app = angular.module('myApp', ['ngRoute']);
+        var app = angular.module("myApp", ['ngRoute']);
 
         app.config(function ($routeProvider) {
             $routeProvider
                 .when('/list-phone', {
-                    templateUrl: '/phone/list-phone.html',
-                    controller: 'ListPhoneCtrl'
+                    templateUrl: "page/phone/list.html",
+                    controller: "listCtrl"
                 })
+                .when('/phone/add', {
+                    templateUrl: "page/phone/create.html",
+                    controller: "createCtrl"
+                })
+
                 .when('/detail/phone/:id', {
-                    templateUrl: "/phone/detail.html",
-                    controller: 'DetailCtrl'
+                    templateUrl: "page/phone/detail.html",
+                    controller: "detailCtrl"
                 })
-                .when('/add', {
-                    templateUrl: "/phone/add.html",
-                    controller: 'AddCtrl'
-                })
+
                 .when('/edit/phone/:id', {
-                    templateUrl: "/phone/edit.html",
-                    controller: 'EditCtrl'
+                    templateUrl: "page/phone/update.html",
+                    controller: "updateCtrl"
                 })
         })
     </script>
 
-    <script src="phone/add.js"></script>
-    <script src="phone/detail.js"></script>
-    <script src="phone/edit.js"></script>
-    <script src="phone/list.js"></script>
+    <script src="page/phone/create.js"></script>
+    <script src="page/phone/list.js"></script>
+    <script src="page/phone/detail.js"></script>
+    <script src="page/phone/update.js"></script>
 </head>
 
 <body ng-app="myApp">
@@ -48,19 +51,22 @@
                     <a class="nav-link " href="#!list-phone">Danh sách</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#!add">Thêm</a>
+                    <a class="nav-link" href="#!phone/add">Thêm</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sửa</a>
+                    <a class="nav-link" href="#!edit/phone/1">Sửa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#!/detail/phone/:1">Chi tiết</a>
+                    <a class="nav-link " href="#!detail/phone/1">Chi tiết</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div style="min-height: calc(100vh - 131px);" ng-view>
+    <div class="container">
+        <div  ng-view>
+        
+        </div>
 
     </div>
 </body>

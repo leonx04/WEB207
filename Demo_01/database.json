@@ -1,10 +1,16 @@
 {
-    "product": [
-        {
-            "id": "1",
-            "ten": "SamSung S10",
-            "hang": "SamSung",
-            "gia": "100000"
-        }
-    ]
+  "product": [
+    {
+      "id": "1",
+      "ten": "Sam sung galaxy s10",
+      "hang": "SAMSUNG",
+      "gia": "100"
+    },
+    {
+      "id": "2",
+      "ten": "IPHONE 12",
+      "hang": "APPLE",
+      "gia": "2000"
+    }
+  ]
 }
