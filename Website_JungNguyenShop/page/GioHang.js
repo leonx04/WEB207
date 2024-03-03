@@ -4,6 +4,7 @@ app.controller('GioHangController', function ($scope, $http) {
     $scope.giohang = [];
     $scope.selectedItems = []; // Danh sách sản phẩm được chọn
     $scope.selectedTotalPrice = 0; // Tổng giá trị của các sản phẩm được chọn
+    $scope.selectAll = false; // Trạng thái chọn tất cả
 
     // Mặc định tổng giá trị là 0
     $scope.tongTien = 0;
@@ -64,12 +65,13 @@ app.controller('GioHangController', function ($scope, $http) {
         if ($scope.selectedItems.length > 0) {
             // Hiển thị tổng giá trị của các sản phẩm được chọn
             $scope.tongTien = $scope.selectedTotalPrice;
+            $scope.selectAll = true; // Nếu có ít nhất một sản phẩm được chọn, chọn tất cả
         } else {
             // Không có sản phẩm được chọn, đặt tổng giá trị về 0
             $scope.tongTien = 0;
+            $scope.selectAll = false; // Nếu không có sản phẩm được chọn, bỏ chọn tất cả
         }
     };
-
 
     // Hàm được gọi khi click vào checkbox SelectAllSP
     $scope.selectAllProducts = function () {
@@ -105,7 +107,6 @@ app.controller('GioHangController', function ($scope, $http) {
             alert("Vui lòng chọn ít nhất một sản phẩm để xóa.");
         }
     };
-
 
     // Gọi hàm lấy danh sách giỏ hàng khi trang được tải lên
     getGioHang();
